@@ -1,0 +1,11 @@
+<div
+  class="toggle"
+  [class.active-de]="activeLanguage === 'de'"
+  [class.active-en]="activeLanguage === 'en'"
+  (click)="toggleLanguage()"
+>
+  <div class="toggle-button">
+    <span class="label left" [class.active]="activeLanguage === 'en'">EN</span>
+    <span class="label right" [class.active]="activeLanguage === 'de'">DE</span>
+  </div>
+</div>
