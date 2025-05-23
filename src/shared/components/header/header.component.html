@@ -1,1 +1,17 @@
-<p>header works!</p>
+<header class="header" role="banner">
+  <div>
+    <div class="languageToggle">
+      <app-toggle-language
+        [activeLanguage]="language"
+        (languageChange)="onLanguageChange($event)"
+      ></app-toggle-language>
+    </div>
+
+    <nav role="navigation" aria-label="Main Navigation">
+      <a href="#about-me">About me</a>
+      <a href="#skills">Skills</a>
+      <a href="#portfolio">Portfolio</a>
+    </nav>
+  </div>
+  <img src="/images/logo/Property 1=Default.svg" alt="Logo Anne Dalchow" />
+</header>
