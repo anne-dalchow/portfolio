@@ -1,7 +1,61 @@
 <section class="hero">
   <app-header></app-header>
   <div class="hero-content">
-    <h1>Willkommen</h1>
-    <p>Ich bin Anne.</p>
+    <p>Frontend Developer</p>
+    <div>
+      <h1>Anne Dalchow</h1>
+      <div>
+        <button>Button1</button>
+        <button>Button2</button>
+      </div>
+    </div>
+
+    <div class="marquee"></div>
+    <div class="left-lateral">
+      <button class="vertical-button">
+        <svg viewBox="0 0 30 48" width="30" height="48">
+          <rect
+            x="0"
+            y="0"
+            width="30"
+            height="48"
+            rx="15"
+            fill="rgb(41, 41, 41,0)"
+          />
+          <g class="arrow">
+            <line
+              x1="15"
+              y1="12"
+              x2="15"
+              y2="28"
+              stroke="white"
+              stroke-width="2"
+            />
+            <polygon points="11,28 19,28 15,34" fill="white" />
+          </g>
+        </svg>
+      </button>
+
+      <div class="line"></div>
+    </div>
+    <div class="right-lateral">
+      <p>anne.dalchow(at)web.de</p>
+      <app-hover-dot dotPosition="right" color="#008080">
+        <img
+          class="social-media-icons"
+          src="/images/sides/Property 1=GitHub.svg"
+          alt="GitHub Icon"
+        />
+      </app-hover-dot>
+
+      <app-hover-dot dotPosition="right" color="#008080">
+        <img
+          class="social-media-icons"
+          src="/images/sides/Property 1=Linkedin.svg"
+          alt="LinkedIn Icon"
+        />
+      </app-hover-dot>
+      <div class="line"></div>
+    </div>
   </div>
 </section>
