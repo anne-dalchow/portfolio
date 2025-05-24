@@ -1,0 +1,38 @@
+.hover-dot {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  --dot-size: 6px;
+
+  &.right::before,
+  &.below::before {
+    content: '';
+    width: var(--dot-size);
+    height: var(--dot-size);
+    border-radius: 50%;
+    background-color: var(--hover-color);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 5;
+  }
+
+  &.below::before {
+
+    top: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &.right::before {
+
+    right: -1rem;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+}
