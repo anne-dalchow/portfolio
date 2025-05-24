@@ -1,0 +1,45 @@
+.custom-button {
+  position: relative;
+  overflow: hidden;
+  padding: 0.5rem 1rem;
+  border: 1px solid black;
+  background: none;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+
+  color: white;
+  border: 1px solid #FFFFFF;
+  border-radius: 100px;
+
+  .text-wrapper {
+    display: inline-block;
+    white-space: nowrap;
+    will-change: transform;
+  }
+
+  .text {
+    display: inline-block;
+  }
+
+  .gap {
+    display: inline-block;
+    width: 2rem; // oder mehr, je nach Textlänge
+  }
+
+  &:hover .text-wrapper {
+    animation: slideLeft 7s linear infinite;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
