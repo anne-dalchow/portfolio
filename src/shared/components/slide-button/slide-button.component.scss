@@ -2,31 +2,36 @@
   position: relative;
   overflow: hidden;
   padding: 0.5rem 1rem;
-  border: 1px solid black;
-  background: none;
-  cursor: pointer;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  white-space: nowrap;
-
-  color: white;
   border: 1px solid #FFFFFF;
   border-radius: 100px;
+  background: none;
+  cursor: pointer;
+  white-space: nowrap;
+  color: white;
+  font-family: 'Karla';
+  font-weight: 400;
+
+  &:hover {
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+  }
 
   .text-wrapper {
-    display: inline-block;
+
+    display: inline-flex;
     white-space: nowrap;
     will-change: transform;
+    min-width: 300%;
   }
 
   .text {
+    cursor: pointer;
     display: inline-block;
   }
 
   .gap {
     display: inline-block;
-    width: 2rem; // oder mehr, je nach Textlänge
+    width: 4rem;
   }
 
   &:hover .text-wrapper {
@@ -36,7 +41,7 @@
 
 @keyframes slideLeft {
   0% {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
 
   100% {
