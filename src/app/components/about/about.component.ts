@@ -1,8 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { InfoCardComponent } from '../info-card/info-card.component';
 
 @Component({
   selector: 'app-about',
-  imports: [],
+  imports: [CommonModule, InfoCardComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'
 })

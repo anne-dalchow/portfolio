@@ -1,0 +1,19 @@
+.about-me {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+
+  .portrai-container {
+    width: 568px;
+    height: 568px;
+    background: url('/images/about_me/placeholder-avatar.jpg');
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(1);
+    border-radius: 30px;
+  }
+}
