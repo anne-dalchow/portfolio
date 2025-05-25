@@ -9,5 +9,11 @@ import { InfoCardComponent } from '../info-card/info-card.component';
   styleUrl: './about.component.scss'
 })
 export class AboutComponent {
+  isActivated = false;
 
+  activateOnce() {
+    if (!this.isActivated) {
+      this.isActivated = true;
+    }
+  }
 }
