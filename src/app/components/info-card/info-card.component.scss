@@ -1,0 +1,27 @@
+.wrapper-info-card {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  >.info-card {
+    background-color: #1f2e2e;
+    border-radius: 16px;
+    padding: 2rem;
+    color: #e0f2f1;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin: 1rem auto;
+
+    &__title {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #00e676;
+    }
+
+    &__content {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+}
