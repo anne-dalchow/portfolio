@@ -1,10 +1,5 @@
-.wrapper {
-  width: 1440px;
-  margin: 0 auto;
-}
-
 .hero {
-  background-image: url('/images/background.svg');
+  background-image: url('/images/backgrounds/bg_hero.svg');
   background-position: center bottom;
   background-size: cover;
   width: 100%;
@@ -18,7 +13,7 @@
     justify-content: center;
     align-items: center;
     gap: 0.6rem;
-    margin: auto;
+    margin: 200px auto auto auto;
 
     >p {
       font-family: 'Fira Code', sans-serif;
@@ -39,9 +34,20 @@
         font-weight: 700;
         text-align: center;
       }
+
+      >div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 48px;
+      }
     }
   }
 }
+
+
+
 
 .left-lateral {
   display: flex;
@@ -52,14 +58,14 @@
   position: absolute;
   width: 1.6rem;
   height: 17.3rem;
-  left: 6.2rem;
+  left: 13.75rem;
   bottom: 0;
   mix-blend-mode: normal;
 }
 
 .line {
   width: 2px;
-  background-color: #008080;
+  background-color: var(--accent-color);
   flex-grow: 1;
 }
 
@@ -72,13 +78,18 @@
   position: absolute;
   width: 1.7rem;
   height: 26rem;
-  right: 6.2rem;
+  right: 13.75rem;
   bottom: 0;
   mix-blend-mode: normal;
 
   >p {
+    cursor: pointer;
     margin-bottom: 5rem;
     transform: rotate(90deg);
+
+    &:hover {
+      color: var(--accent-color);
+    }
   }
 }
 
@@ -98,13 +109,13 @@
   }
 
   50% {
-    transform: translateY(8px); // oder mehr/weniger je nach Geschmack
+    transform: translateY(8px);
   }
 }
 
 .vertical-button {
   background: transparent;
-  border: 1px solid #008080;
+  border: 1px solid var(--accent-color);
   border-radius: 15px;
   cursor: pointer;
   width: 30px;

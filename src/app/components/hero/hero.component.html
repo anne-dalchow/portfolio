@@ -1,4 +1,5 @@
 <section class="hero">
+  <app-marquee></app-marquee>
   <app-header></app-header>
   <div class="hero-content">
     <p>Frontend Developer</p>
@@ -7,13 +8,11 @@
       <div>
         <app-slide-button
           text="Check my work"
-          maxWidth="150px"
+          maxWidth="155px"
         ></app-slide-button>
-        <app-slide-button text="Contact me" maxWidth="150px"></app-slide-button>
+        <app-slide-button text="Contact me" maxWidth="130px"></app-slide-button>
       </div>
     </div>
-
-    <div class="marquee"></div>
     <div class="left-lateral">
       <button class="vertical-button">
         <svg viewBox="0 0 30 48" width="30" height="48">
@@ -41,9 +40,10 @@
 
       <div class="line"></div>
     </div>
+
     <div class="right-lateral">
       <p>anne.dalchow(at)web.de</p>
-      <app-hover-dot dotPosition="right" color="#008080">
+      <app-hover-dot dotPosition="right" color="var(--accent-color)">
         <img
           class="social-media-icons"
           src="/images/sides/Property 1=GitHub.svg"
@@ -51,7 +51,7 @@
         />
       </app-hover-dot>
 
-      <app-hover-dot dotPosition="right" color="#008080">
+      <app-hover-dot dotPosition="right" color="var(--accent-color)">
         <img
           class="social-media-icons"
           src="/images/sides/Property 1=Linkedin.svg"
