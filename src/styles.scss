@@ -9,6 +9,8 @@
   line-height: 1.4;
   font-size: 18px;
   cursor: default;
+  --accent-color: rgb(60, 207, 182);
+  --background-color: rgb(28, 28, 28);
 }
 
 html {
@@ -19,6 +21,11 @@ html {
   html {
     font-size: 90%;
   }
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0px auto;
 }
 
 .font-fira {
@@ -36,7 +43,7 @@ html {
 }
 
 body {
-  background-color: rgba(41, 41, 41, 1);
+  background-color: var(--background-color);
   color: rgb(255, 255, 255);
   height: 100%;
   width: 100%;
@@ -50,4 +57,31 @@ p {
 a {
   text-decoration: none;
   color: rgb(255, 255, 255);
+}
+
+
+// ===== SCROLLBAR =====
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00a896;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #028a76;
+}
+
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #00a896 #1a1a1a;
 }
