@@ -1,11 +1,10 @@
+@use '../../../styles/mixins.scss' as *;
+
+
 .about-me {
   width: 100%;
   height: 100vh;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 96px;
+  @include dFlex($jc:space-between, $ai: flex-end, $g: 96px);
 }
 
 .portrait-wrapper {
@@ -47,21 +46,13 @@
 }
 
 .description-wrapper {
-  display: flex;
-  flex-flow: column nowrap;
-  gap: 32px;
+  @include dFlexShort($fflow: column nowrap, $g: 32px);
 
   >.description {
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 16px;
+    @include dFlexShort($fflow: column nowrap, $g: 16px);
 
     >div {
-      display: flex;
-      flex-flow: row nowrap;
-      gap: 24px;
+      @include dFlexShort($fflow: row nowrap, $g: 24px);
     }
   }
-
-
 }
