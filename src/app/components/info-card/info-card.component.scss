@@ -12,7 +12,7 @@
   }
 
   >.info-card {
-    max-width: 568px;
+  max-width: var(--maxwidth, 568px);
     display: flex;
     flex-direction: column;
     justify-content: center;
