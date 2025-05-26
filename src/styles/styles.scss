@@ -1,0 +1,87 @@
+@use './fonts';
+
+// =========== GLOBAL STYLES ===========
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1.4;
+  font-size: 18px;
+  cursor: default;
+  --accent-color: rgb(60, 207, 182);
+  --background-color: rgb(28, 28, 28);
+}
+
+html {
+  font-size: 100%;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+.wrapper {
+  max-width: 1250px;
+  margin: 0px auto;
+}
+
+.font-fira {
+  font-family: 'Fira Code', sans-serif;
+}
+
+.font-karla {
+  font-family: 'Karla', sans-serif;
+}
+
+.header {
+  font-family: 'Fira Code', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+body {
+  background-color: var(--background-color);
+  color: rgb(255, 255, 255);
+  height: 100%;
+  width: 100%;
+}
+
+p {
+  font-family: 'Karla';
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+
+// ===== SCROLLBAR =====
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00a896;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #028a76;
+}
+
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #00a896 #1a1a1a;
+}
