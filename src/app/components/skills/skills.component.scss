@@ -1,3 +1,5 @@
+@use '../../../styles/mixins.scss' as *;
+
 #bg-skills {
   background-image: url('/images/backgrounds/bg_skills.svg');
   background-position: center left;
@@ -6,10 +8,16 @@
 }
 
 .skills {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid white;
   width: 100%;
+  height: 100dvh;
   height: 100vh;
+  @include dFlex($jc:space-between, $g: 12.5rem);
+
+  >.skill-icon-container{
+     flex: 1;
+  }
+}
+
+  .description-wrapper{
+    @include dFlex($fflow: column wrap ,$ai: flex-start, $g: 40px);
 }
