@@ -10,4 +10,6 @@ import { Component, Input } from '@angular/core';
 export class InfoCardComponent {
   @Input() title: string = '';
   @Input() subtitle: string = '';
+@Input() maxwidth: number | string = '';
+
 }
