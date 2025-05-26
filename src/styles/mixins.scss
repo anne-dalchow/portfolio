@@ -1,0 +1,13 @@
+@mixin dFlex($fflow: row wrap, $jc: center, $ai: center, $g: 0px) {
+  display: flex;
+  flex-flow: $fflow;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $g;
+}
+
+@mixin dFlexShort($fflow: row wrap, $g: 0px) {
+  display: flex;
+  flex-flow: $fflow;
+  gap: $g;
+}
