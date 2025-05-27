@@ -1,31 +1,37 @@
+
 .skill-icons {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  align-content: flex-start;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
   gap: 40px 72px;
 
-  >figure {
+
+  > figure,
+  > .tooltip-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 8px;
 
-    >img {
+    img {
       max-width: 100%;
+      height: auto;
+
+      &:hover{
+      transform: scale(1.2);
+      transition: all 300ms;
+    }
     }
 
-    >figcaption {
-      font-family: 'Fira Code';
+    > figcaption {
+      font-family: 'Fira Code', monospace;
       font-size: 1rem;
       font-weight: 400;
       text-align: center;
     }
+
+
   }
 }
-
-
 
 .tooltip-container {
   position: relative;
@@ -34,8 +40,7 @@
   .tooltip {
     position: absolute;
     bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
+    left: -5%;
     background: white;
     padding: 1rem;
     border-radius: 10px;
@@ -59,10 +64,6 @@
         flex-direction: column;
         align-items: center;
 
-        img {
-          width: 30px;
-          height: 30px;
-        }
 
         span {
           font-size: 0.8rem;
@@ -73,8 +74,8 @@
     .arrow {
       position: absolute;
       top: 100%;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 10%;
+
       width: 0;
       height: 0;
       border-left: 10px solid transparent;
@@ -85,12 +86,10 @@
 
   figure {
     cursor: pointer;
-    margin: 0;
     text-align: center;
 
     figcaption {
       font-family: 'Fira Code', monospace;
-      color: #3dcfb6;
     }
   }
 
