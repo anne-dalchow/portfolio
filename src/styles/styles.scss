@@ -9,6 +9,7 @@
   line-height: 1.4;
   font-size: 18px;
   cursor: default;
+  scroll-behavior: smooth;
   --accent-color: rgb(60, 207, 182);
   --background-color: rgb(28, 28, 28);
 }
@@ -29,7 +30,7 @@ html {
 }
 
 .font-fira {
-  font-family: 'Fira Code', sans-serif;
+      font-family: 'Fira Code', monospace;
 }
 
 .font-karla {
@@ -37,7 +38,7 @@ html {
 }
 
 .header {
-  font-family: 'Fira Code', sans-serif;
+      font-family: 'Fira Code', monospace;
   font-weight: 400;
   font-size: 1.2rem;
 }
