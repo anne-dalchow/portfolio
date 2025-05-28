@@ -17,12 +17,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    background: rgba(61, 207, 182, 0.1);
+    background: var(--bg-color, rgba(61, 207, 182, 0.1));
     border-radius: 30px;
-    border: 1px solid #3DCFB6;
+    border: var(--border, 1px solid #3DCFB6);
     backdrop-filter: blur(2px);
     gap: 28px;
-    padding: 2rem;
+    padding: var(--padding, 2rem);
     color: #e0f2f1;
 
     >.info-card__title {
