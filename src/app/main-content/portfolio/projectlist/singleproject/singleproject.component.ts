@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-singleproject',
@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class SingleprojectComponent {
   @Input() project = {
+    index: 1,
     name: "Join",
     description: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ",
     techStack: [
@@ -19,5 +20,15 @@ export class SingleprojectComponent {
     ],
     previewImg: "/images/projects/join_preview.svg",
     img: "/images/projects/join.jpg"
+  }
+
+  isModalVisible = false;
+
+  onClick() {
+    this.isModalVisible = true;
+  }
+
+  closeModal() {
+    this.isModalVisible = false;
   }
 }
