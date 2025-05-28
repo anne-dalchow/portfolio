@@ -12,4 +12,10 @@ import { InfoCardComponent } from "../../../../shared/components/info-card/info-
 })
 export class ProjectlistComponent {
   projectlistdata = inject(ProjectlistdataService);
+
+  isModalVisible = false;
+
+  showModal() {
+    this.isModalVisible = true;
+  }
 }
