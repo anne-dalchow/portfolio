@@ -1,0 +1,86 @@
+@mixin dFlex($fflow: row wrap, $jc: center, $ai: center, $g: 0px) {
+  display: flex;
+  flex-flow: $fflow;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $g;
+}
+
+.projects-container {
+
+  position: relative;
+  width: 100%;
+  height: max-content;
+  @include dFlex($fflow: row nowrap, $jc:space-between);
+
+  .title-container {
+    cursor: pointer;
+    @include dFlex($jc:space-between);
+    width: 880px;
+    padding: 40px 32px;
+    border-bottom: 1px solid rgba(61, 207, 182, 1);
+
+    div {
+      @include dFlex($g:8px);
+    }
+
+    h3 {
+      font-family: 'Fira Code';
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 120%;
+    }
+
+    img {
+      transform: rotate(-45deg);
+      opacity: 0;
+    }
+  }
+
+  // Hier ist die zentrale Änderung
+  &:hover {
+    .title-container {
+      background: rgba(61, 207, 182, 0.3);
+      cursor: pointer;
+
+      img {
+        opacity: 1;
+        animation: rotate 500ms ease-in-out;
+
+        @keyframes rotate {
+          from {
+            rotate: 45deg;
+          }
+
+          to {
+            rotate: 0deg;
+          }
+        }
+      }
+    }
+
+    .preview-img-container img {
+      opacity: 1;
+    }
+  }
+
+  .preview-img-container {
+    .img-bg-hover {
+      z-index: 0;
+      opacity: 0;
+      position: absolute;
+      right: -15px;
+      bottom: -15px;
+      transition: opacity 400ms ease-in-out;
+    }
+
+    img {
+      z-index: 2;
+      opacity: 0;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      transition: opacity 300ms ease-in-out;
+    }
+  }
+}
