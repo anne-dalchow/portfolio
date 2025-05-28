@@ -1,4 +1,4 @@
-import { Component,inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { SingleprojectComponent } from "./singleproject/singleproject.component";
 import { ProjectlistdataService } from '../../../projectlistdata.service';
 import { CommonModule } from '@angular/common';
