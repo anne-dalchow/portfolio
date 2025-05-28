@@ -1,5 +1,5 @@
-<div class="projects-container">
-
+<!-- Projekt-Kachel -->
+<div (click)="onClick()" class="projects-container">
   <div class="title-container">
     <div>
       <h3>{{ project.name }}</h3>
@@ -9,13 +9,41 @@
 
     <div class="tech-stack">
       @for (tech of project.techStack; track $index) {
-      {{ tech.name }} <span class="accent-color">|</span> }
+      {{ tech.name }} <span class="accent-color">|</span>
+      }
     </div>
   </div>
 
   <div class="preview-img-container">
     <img class="img-bg-hover" src="/images/projects/preview-hover.svg" alt="">
-    <img src="{{project.previewImg}}" alt="Project preview image for {{project.name}}">
+    <img [src]="project.previewImg" alt="Project preview image for {{project.name}}">
   </div>
-
 </div>
+
+<!-- Modal -->
+@if (isModalVisible) {
+<section class="modal-container">
+  <div class="inner-modal-container">
+    <div class="project-text">
+      <h2>{{project.index}}</h2>
+      <h3>{{ project.name }}</h3>
+      <p>{{ project.description }}</p>
+      <div class="tech-stack-images">
+        @for (tech of project.techStack; track $index) {
+        <div>
+          <img src="{{tech.img}}" alt="">
+          <p>{{tech.name}}</p>
+        </div>
+        }
+      </div>
+      <button>GitHub</button>
+      <button>Live Text</button>
+    </div>
+    <div class="project-img-container">
+      <img src="/images/projects/close.svg" alt="close icon" (click)="closeModal()" style="cursor:pointer;" />
+      <img class="project-img" [src]="project.img" width="520px" alt="project image">
+      <button>Next project -></button>
+    </div>
+  </div>
+</section>
+}
