@@ -7,6 +7,6 @@
     </p>
   </app-info-card>
   @for (project of projectlistdata.projectlist; track $index) {
-  <app-singleproject [project]="project"></app-singleproject>
+  <app-singleproject [project]="project" (openModal)="showModal()"></app-singleproject>
   }
 </div>
