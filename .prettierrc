@@ -1,5 +1,5 @@
 {
   "scssSyntax": "scss",
-  "singleQuote": true,
+  "singleQuote": false,
   "printWidth": 100
 }
