@@ -2,15 +2,11 @@
   <section class="about-me">
     <div class="portrait-wrapper">
       <div class="portrait-container" (mouseenter)="activateOnce()" [class.active]="isActivated">
-        <img
-          class="portrait-img"
-          src="images/about_me/placeholder-avatar.jpg"
-          alt="Porträt von mir"
-        />
+        <img class="portrait-img" src="images/about_me/placeholder-avatar.jpg" alt="Porträt von mir" />
       </div>
       <div class="portrait-bg" [class.visible]="isActivated"></div>
     </div>
-    <app-info-card subtitle="Who I Am" title="About me">
+    <app-info-card subtitle="Who I Am" title="About me" translateX="100px">
       <div class="description-wrapper">
         <p>
           Hey there, I'm Anne! <br />
