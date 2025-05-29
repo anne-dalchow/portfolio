@@ -25,8 +25,11 @@
 <section class="modal-container">
   <div class="inner-modal-container">
     <div class="project-text">
-      <h2>{{project.index}}</h2>
-      <h3>{{ project.name }}</h3>
+      <div class="headlines">
+        <h2>{{project.index}}</h2>
+        <h3>{{ project.name }}</h3>
+      </div>
+      <p class="bold-accent-color">What is this project about?</p>
       <p>{{ project.description }}</p>
       <div class="tech-stack-images">
         @for (tech of project.techStack; track $index) {
