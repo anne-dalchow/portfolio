@@ -97,10 +97,10 @@
   .inner-modal-container {
     background: rgb(11, 69, 58);
     background: linear-gradient(45deg, rgb(20, 20, 20) 40%, rgba(11, 69, 58, 1) 100%);
-    @include dFlex($fflow: row nowrap);
-    max-width: 1250px;
-    width: 90%;
-    padding: 2rem;
+    @include dFlex($fflow: row nowrap,$jc:space-between);
+    max-width: 90%;
+    width: 65%;
+    padding: 4rem;
 
     position: fixed;
     top: 50%;
@@ -110,12 +110,35 @@
     border-radius: 30px;
     border: 1px solid rgba(61, 207, 182, 1);
   }
+  .project-text{
+    max-width: 500px;
+     @include dFlex($fflow: column wrap, $ai: flex-start, $g:2rem);
+    .headlines{
+      @include dFlex($fflow: column wrap, $ai: flex-start);
+    h2{
+      font-size: 128px;
+      line-height: 100px;
+    }
+    h3{
+      font-size: 64px;
+    }
+    }
+.tech-stack-images{
+  @include dFlex($jc: flex-start,$g: 1rem );
+  >div{
+     @include dFlex( $g: 0.25rem );
+  }
+}
+
+  }
 
   .project-img-container {
     @include dFlex($fflow:column nowrap, $jc:space-between, $ai: flex-end, $g: 2rem);
 
     .project-img{
       border-radius: 30px;
+      max-width: 100%;
+      min-width: 300px;
     }
   }
 }
