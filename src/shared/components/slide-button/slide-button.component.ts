@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component,Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-slide-button',
@@ -8,6 +8,6 @@ import { Component,Input} from '@angular/core';
   styleUrl: './slide-button.component.scss'
 })
 export class SlideButtonComponent {
-    @Input() text: string = '';
-    @Input() maxWidth: string = '150px';
+  @Input() text: string = '';
+  @Input() btnHref: string = '';
 }
