@@ -6,7 +6,13 @@
       Interact with projects to see my skills in action.
     </p>
   </app-info-card>
+
   @for (project of projectlistdata.projectlist; track $index) {
-  <app-singleproject [project]="project" (openModal)="showModal()"></app-singleproject>
+  <app-singleproject [project]="project" (openModal)="showModal(project)">
+  </app-singleproject>
   }
+
+  <app-singleproject *ngIf="isModalVisible" [project]="selectedProject" [isModalVisible]="isModalVisible"
+    (closeModal)="hideModal()" (nextProjectRequest)="loadNextProject()">
+  </app-singleproject>
 </div>
