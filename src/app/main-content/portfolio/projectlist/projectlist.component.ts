@@ -14,8 +14,21 @@ export class ProjectlistComponent {
   projectlistdata = inject(ProjectlistdataService);
 
   isModalVisible = false;
+  selectedProject: any = null;
 
-  showModal() {
+  showModal(project: any) {
+    this.selectedProject = project;
     this.isModalVisible = true;
+  }
+
+  hideModal() {
+    this.isModalVisible = false;
+  }
+
+  loadNextProject() {
+    const list = this.projectlistdata.projectlist;
+    const currentIndex = list.findIndex(p => p === this.selectedProject);
+    const nextIndex = (currentIndex + 1) % list.length;
+    this.selectedProject = list[nextIndex];
   }
 }
