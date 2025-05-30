@@ -156,3 +156,23 @@
     }
   }
 }
+
+
+#nextProject {
+  @include dFlex($g: 8px);
+  background-color: transparent;
+  border: none;
+  color: #3CCFB6;
+  
+  img {
+    transition: all 1s ease; 
+  }
+
+  &:hover {
+    color: white;
+
+    >img {
+      transform: translateX(20px);
+    }
+  }
+}
