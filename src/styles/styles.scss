@@ -168,6 +168,7 @@ p {
 a {
   text-decoration: none;
   color: rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 .bold {
@@ -184,7 +185,8 @@ a {
   color: rgba(61, 207, 182, 1);
 }
 
-button, a{
+button{
+  font-family: 'Karla';
   cursor: pointer;
 }
 
