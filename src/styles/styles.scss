@@ -132,7 +132,7 @@ html {
 .wrapper {
   max-width: 1250px;
   margin: 0px auto;
-  border: 1px solid white;
+  // border: 1px solid white;
 }
 
 .header {
@@ -182,6 +182,10 @@ a {
   font-size: 24px;
   font-weight: 700;
   color: rgba(61, 207, 182, 1);
+}
+
+button, a{
+  cursor: pointer;
 }
 
 // ===== SCROLLBAR =====
