@@ -1,8 +1,9 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { SvgButtonComponent } from "../../../../../shared/components/svg-button/svg-button.component";
 
 @Component({
   selector: 'app-singleproject',
-  imports: [],
+  imports: [SvgButtonComponent],
   templateUrl: './singleproject.component.html',
   styleUrl: './singleproject.component.scss'
 })
