@@ -1,0 +1,27 @@
+.testimonal-container{
+ width: 600px;
+ height: 275px;
+ background-color: rgba(61, 207, 182, 0.3);
+ border: 1px solid rgba(61, 207, 182, 1);
+ border-radius: 32px;
+ padding: 48px 40px;
+
+ display: flex;
+ flex-flow: column nowrap;
+ justify-content: space-between;
+
+ div{
+display: flex;
+flex-flow: row nowrap;
+align-items: center;
+gap: 16px;
+white-space: nowrap;
+
+  .stroke{
+   width: 100%;
+   height: 1px;
+   background-color: white;
+  }
+ }
+}
+
