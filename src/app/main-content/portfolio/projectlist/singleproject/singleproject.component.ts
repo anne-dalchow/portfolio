@@ -23,13 +23,22 @@ export class SingleprojectComponent {
     img: "/images/projects/join.jpg"
   }
 
-  isModalVisible = false;
+  @Input() isModalVisible: boolean = false;  // Modal sichtbar oder nicht
+
+  @Output() openModal = new EventEmitter<any>();
+  @Output() closeModal = new EventEmitter<void>();
+  @Output() nextProjectRequest = new EventEmitter<void>();
 
   onClick() {
-    this.isModalVisible = true;
+    this.openModal.emit(this.project);
   }
 
-  closeModal() {
-    this.isModalVisible = false;
+  handleCloseModal() {
+    this.closeModal.emit();
+  }
+
+  showNextProject(event: Event) {
+    event.stopPropagation();  // Klick nicht an Eltern weitergeben (Modal schließen verhindern)
+    this.nextProjectRequest.emit();
   }
 }
