@@ -15,9 +15,14 @@
 
 
 <div class="container">
+  @if (btnHref) {
   <a href="{{btnHref}}">
     <div class="btn btn-two">
       {{text}}
     </div>
   </a>
+  } @else {
+  <button type="{{buttonType}}" class="btn btn-two">{{text}}</button>
+  }
+
 </div>
