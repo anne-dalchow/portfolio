@@ -9,24 +9,30 @@
   transform: translateX(var(--translate-x, -100px));
   transition: opacity 0.8s ease, transform 1s ease;
 
-  // Sichtbar nach Scroll
   &.animate {
     opacity: 1;
     transform: translateX(0);
   }
 
-  > .info-card__subtitle {
+  > .info-card-title{
+    h2{
+      line-height: normal;
+        }
+  }
+
+  > .info-card-subtitle {
     font-family: 'Karla';
     font-size: 24px;
-    color: rgba(61, 207, 182, 1);
+    color: var(--accent-color);
   }
 
   > .info-card {
-    max-width: var(--maxwidth, 568px);
+    max-width: var(--maxwidth, 550px);
     display: flex;
-    flex-direction: column;
+
     justify-content: center;
     align-items: flex-start;
+    flex-flow: column wrap;
     background: var(--bg-color, rgba(61, 207, 182, 0.1));
     border-radius: 30px;
     border: var(--border, 1px solid #3DCFB6);

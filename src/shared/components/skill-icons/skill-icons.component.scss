@@ -1,37 +1,32 @@
-
 .skill-icons {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
-  gap: 40px 72px;
-
-
-  > figure,
-  > .tooltip-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-
-    img {
-      max-width: 100%;
-      height: auto;
-
-      &:hover{
-      transform: scale(1.2);
-      transition: all 300ms;
-    }
-    }
-
-    > figcaption {
-      font-family: 'Fira Code', monospace;
-      font-size: 1rem;
-      font-weight: 400;
-      text-align: center;
-    }
-
-
-  }
+  display: flex;
+  flex-wrap: wrap;         
+  justify-content: center; 
+  gap: 2rem 4rem;               
 }
+
+.skill-icons > figure,
+.skill-icons > .tooltip-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  
+  flex: 0 1 80px; 
+  max-width: 120px; 
+}
+
+.skill-icons img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.skill-icons img:hover {
+  transform: scale(1.2);
+}
+
 
 .tooltip-container {
   position: relative;
@@ -96,5 +91,19 @@
   &:hover .tooltip {
     opacity: 1;
     pointer-events: auto;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .skill-icons {
+    gap: 1rem 1rem;
+  }
+  
+  .skill-icons > figure,
+  .skill-icons > .tooltip-container {
+    flex: 0 1 60px;
+    max-width: 80px;
+    gap: 4px;
   }
 }
