@@ -1,14 +1,16 @@
-.testimonal-container{
+.testimonial-container{
  width: 600px;
  height: 275px;
  background-color: rgba(61, 207, 182, 0.3);
- border: 1px solid rgba(61, 207, 182, 1);
+ border: 1px solid var(--accent-color);
  border-radius: 32px;
  padding: 48px 40px;
 
  display: flex;
  flex-flow: column nowrap;
  justify-content: space-between;
+  transition: transform 0.8s ease, opacity 0.5s ease;
+  flex-shrink: 0;
 
  div{
 display: flex;
