@@ -1,30 +1,78 @@
+.testimonial-container{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  min-height: 100dvh;
+  width: 100%;
+}
+
 .slider-wrapper {
   width: 100vw;
+  height: fit-content;
   overflow: hidden;
   display: flex;
   justify-content: center;
-}
 
-.slider-track {
+  .slider-track {
   display: flex;
   justify-content: center;
   width: 100vw; 
   transition: transform 0.5s ease-in-out;
+
+  .testimonial-card {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+  transform: scale(0.9);
 }
 
-.testimonial-card {
-  width: 600px;
-  flex-shrink: 0;
+.testimonial-card.scale-100 {
+  opacity: 1;
+  transform: scale(1.0);
+  z-index: 10;
+}
+
+.testimonial-card.scale-90 {
+  opacity: 0.5;
+  transform: scale(0.85);
+  z-index: 1;
+}
+}
+}
+
+
+.navigation-container{
   display: flex;
+  flex-flow: row;
   justify-content: center;
   align-items: center;
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  gap: 1rem;
+
+
+  .dots-container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
 }
 
-.scale-100 {
-  transform: scale(1.05);
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: white;
+  transition: background-color 0.3s ease;
 }
 
-.scale-90 {
-  transform: scale(0.9);
+.dot.active {
+  background-color: var(--accent-color);
+}
+}
+
+.previous, .next{
+  cursor: pointer;
+
+  &:hover path{
+    fill: var(--accent-color);
+  }
 }
