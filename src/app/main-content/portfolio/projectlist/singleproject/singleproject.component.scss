@@ -18,7 +18,7 @@
     @include dFlex($jc:space-between);
     width: 880px;
     padding: 40px 32px;
-    border-bottom: 1px solid rgba(61, 207, 182, 1);
+    border-bottom: 1px solid var(--accent-color);
 
     div {
       @include dFlex($g:8px);
@@ -102,7 +102,7 @@
     transform: translate(-50%, -50%);
     z-index: 1001;
     border-radius: 30px;
-    border: 1px solid rgba(61, 207, 182, 1);
+    border: 1px solid var(--accent-color);
   }
 
   .project-text {
@@ -145,7 +145,7 @@
       &:hover {
         transform: scale(1.2);        
         path {
-          fill: rgba(61, 207, 182, 1);
+          fill: var(--accent-color);
         }
       }
     }
