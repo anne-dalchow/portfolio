@@ -138,6 +138,8 @@
 .btn {
   position: relative;
   color: white;
+  background-color: transparent;
+  border: none;
   width: 150px;
   height: 50px;
   line-height: 50px;
@@ -172,13 +174,13 @@
 .btn-two:hover::after {
   animation-name: rotatecw;
   animation-duration: 3s;
-    border: 1px solid rgba(61, 207, 182, 1);
+    border: 1px solid var(--accent-color);
 
 }
 .btn-two:hover::before {
   animation-name: rotateccw; 
   animation-duration: 4s;
-  border: 1px solid rgba(61, 207, 182, 1);
+  border: 1px solid var(--accent-color);
 
 }
 .btn-two:hover::after, .btn-two:hover::before {
