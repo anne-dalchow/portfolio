@@ -9,17 +9,18 @@
 
 .skills {
   width: 100%;
-  height: 100dvh;
-  height: 100vh;
+  min-height: 100dvh;
   @include dFlex($jc:space-between, $g: 12.5rem);
+  flex-wrap: wrap;
 
   >.skill-icon-container{
-     flex: 1;
+  flex: 1 1 300px; 
+  min-width: 200px;
   }
 }
 
   .description-wrapper{
-    @include dFlex($fflow: column wrap ,$ai: flex-start, $g: 40px);
+    @include dFlex($fflow: column nowrap ,$ai: flex-start, $g: 40px);
 
     .description{
     @include dFlex($fflow: column wrap ,$ai: flex-start, $g: 16px);
