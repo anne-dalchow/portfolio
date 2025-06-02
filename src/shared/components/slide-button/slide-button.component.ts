@@ -10,4 +10,5 @@ import { Component, Input } from '@angular/core';
 export class SlideButtonComponent {
   @Input() text: string = '';
   @Input() btnHref: string = '';
+  @Input() buttonType: 'button' | 'submit' | 'reset' = 'button';
 }
