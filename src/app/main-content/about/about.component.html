@@ -1,41 +1,39 @@
-<div class="wrapper">
-  <section class="about-me">
-    <div class="portrait-wrapper">
-      <div class="portrait-container" (mouseenter)="activateOnce()" [class.active]="isActivated">
-        <img class="portrait-img" src="images/about_me/placeholder-avatar.jpg" alt="Porträt von mir" />
-      </div>
-      <div class="portrait-bg" [class.visible]="isActivated"></div>
+<section class="about-me">
+  <div class="portrait-wrapper">
+    <div class="portrait-container" (mouseenter)="activateOnce()" [class.active]="isActivated">
+      <img class="portrait-img" src="images/about_me/placeholder-avatar.jpg" alt="Porträt von mir" />
     </div>
-    <app-info-card subtitle="Who I Am" title="About me" translateX="100px">
-      <div class="description-wrapper">
-        <p>
-          Hey there, I'm Anne! <br />
-          I found my passion for coding through design. <br />
-          I love turning ideas into real, working things. Learning to code is a never-ending
-          journey, and what keeps me going is the sense of progress I feel after every little
-          breakthrough and the excitement of turning challenges into solutions.
-        </p>
-        <div class="description">
-          <div>
-            <img src="images/about_me/location_on.svg" alt="" />
-            <p>I'm based in Leipzig, Germany, and open to working both locally and remotely.</p>
-          </div>
-          <div>
-            <img src="images/about_me/cognition.svg" alt="" />
-            <p>
-              I'm always curious to learn new technologies and enjoy the challenge of figuring
-              things out. Learning and growing is what drives me.
-            </p>
-          </div>
-          <div>
-            <img src="images/about_me/Quality.svg" alt="" />
-            <p>
-              I approach problems with creativity and persistence. I love bouncing ideas off others
-              — it's one of the best ways to grow.
-            </p>
-          </div>
+    <div class="portrait-bg" [class.visible]="isActivated"></div>
+  </div>
+  <app-info-card class="info-card" subtitle="Who I Am" title="About me" translateX="100px">
+    <div class="description-wrapper">
+      <p>
+        Hey there, I'm Anne! <br />
+        I found my passion for coding through design. <br />
+        I love turning ideas into real, working things. Learning to code is a never-ending
+        journey, and what keeps me going is the sense of progress I feel after every little
+        breakthrough and the excitement of turning challenges into solutions.
+      </p>
+      <div class="description">
+        <div>
+          <img src="images/about_me/location_on.svg" alt="" />
+          <p>I'm based in Leipzig, Germany, and open to working both locally and remotely.</p>
+        </div>
+        <div>
+          <img src="images/about_me/cognition.svg" alt="" />
+          <p>
+            I'm always curious to learn new technologies and enjoy the challenge of figuring
+            things out. Learning and growing is what drives me.
+          </p>
+        </div>
+        <div>
+          <img src="images/about_me/Quality.svg" alt="" />
+          <p>
+            I approach problems with creativity and persistence. I love bouncing ideas off others
+            — it's one of the best ways to grow.
+          </p>
         </div>
       </div>
-    </app-info-card>
-  </section>
-</div>
+    </div>
+  </app-info-card>
+</section>

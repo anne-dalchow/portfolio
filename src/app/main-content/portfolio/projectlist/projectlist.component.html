@@ -1,6 +1,6 @@
-<div class="wrapper">
-  <app-info-card subtitle="Portfolio" title="Featured Projects" maxwidth="880px" bgcolor="transparent" border="none"
-    padding="0">
+<section class="portfolio">
+  <app-info-card class="info-card" subtitle="Portfolio" title="Featured Projects" maxwidth="880px" bgcolor="transparent"
+    border="none" padding="0">
     <p>
       Explore a selection of my work here - <br />
       Interact with projects to see my skills in action.
@@ -8,11 +8,13 @@
   </app-info-card>
 
   @for (project of projectlistdata.projectlist; track $index) {
-  <app-singleproject [project]="project" (openModal)="showModal(project)">
+  <app-singleproject class="singleproject" [project]="project" (openModal)="showModal(project)">
   </app-singleproject>
   }
 
-  <app-singleproject *ngIf="isModalVisible" [project]="selectedProject" [isModalVisible]="isModalVisible"
-    (closeModal)="hideModal()" (nextProjectRequest)="loadNextProject()">
+  @if (isModalVisible) {
+  <app-singleproject [project]="selectedProject" [isModalVisible]="isModalVisible" (closeModal)="hideModal()"
+    (nextProjectRequest)="loadNextProject()">
   </app-singleproject>
-</div>
+  }
+</section>
