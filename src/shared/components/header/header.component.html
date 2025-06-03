@@ -1,10 +1,8 @@
 <header class="header" role="banner">
   <div>
     <div class="languageToggle">
-      <app-toggle-language
-        [activeLanguage]="language"
-        (languageChange)="onLanguageChange($event)"
-      ></app-toggle-language>
+      <app-toggle-language [activeLanguage]="language" (languageChange)="onLanguageChange($event)">
+      </app-toggle-language>
     </div>
 
     <nav role="navigation" aria-label="Main Navigation">
@@ -19,5 +17,5 @@
       </a>
     </nav>
   </div>
-  <img src="images/logo/Default.svg" alt="Logo Anne Dalchow" />
+  <img src="images/logo/ad_logo_full.png" alt="Logo Anne Dalchow" />
 </header>
