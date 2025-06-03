@@ -1,7 +1,9 @@
 <section class="testimonial-container">
   <h3><span class="bold-accent-color">What my Colleages say about me</span></h3>
+  <img class="quotes" src="/images/highlights/quotes.svg" alt="">
 
   <div class="slider-wrapper">
+
     <div class="slider-track">
       @for (testimonial of visibleTestimonials(); track testimonial.index; let i = $index) {
       <div class="testimonial-card" [ngClass]="{
