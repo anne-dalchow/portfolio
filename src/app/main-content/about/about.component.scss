@@ -11,64 +11,63 @@
   flex-flow: $fflow;
   gap: $g;
 }
-.about-me {
-  max-width: 1300px;
-  padding: 2rem;
-  margin: 0 auto;
-  min-height: 100dvh;
+
+.section-wrapper {
   @include dFlex($jc: space-between, $ai: flex-end);
+    min-height: 100dvh;
+
+  .section-one,.section-two{
+    width: 45%;
+  }
 }
 
-.portrait-wrapper {
-  width: 45%;
+.section-one {
   align-self: center;
   position: relative;
   overflow: visible;
 
 
-.portrait-container {
+  .portrait-container {
+    aspect-ratio: 1 / 1; // Quadrat
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+  }
 
-  aspect-ratio: 1 / 1; // Quadrat
-  border-radius: 30px;
-  overflow: hidden;
-  position: relative;
-  z-index: 2;
-}
+  .portrait-bg {
+    position: absolute;
+    bottom: -30px;
+    left: -30px;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    background: url('./../../../../public/images/about_me/avatar-hover-bg.png') center/cover no-repeat;
+    border-radius: 30px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
 
-.portrait-bg {
-  position: absolute;
-  bottom: -30px;
-  left: -30px;
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 1 / 1;
-  background: url('./../../../../public/images/about_me/avatar-hover-bg.png') center/cover no-repeat;
-  border-radius: 30px;
-  z-index: 1;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  pointer-events: none;
+    &.visible {
+      opacity: 1;
+    }
+  }
 
-  &.visible {
-    opacity: 1;
+  .portrait-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(1);
+    transition: filter 0.3s ease;
+
+    .active & {
+      filter: grayscale(0);
+    }
   }
 }
 
-.portrait-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: grayscale(1);
-  transition: filter 0.3s ease;
-
-  .active & {
-    filter: grayscale(0);
-  }
-}
-}
-
-
-.description-wrapper {
+.section-two{
   @include dFlexShort($fflow: column nowrap, $g: 32px);
 
   >.description {
@@ -80,35 +79,23 @@
   }
 }
 
+@media (max-width: 900px) {
+  .section-wrapper {
+    @include dFlex($fflow: column wrap, $jc: space-between, $ai: center, $g:4rem);
+    align-content: center;
+    max-width: 100vw;
+    margin: 0;
 
-
-.info-card{
-  width: 45%;
+.section-one,.section-two {
+      width: 90%;
+    }
+  }
 }
 
-
-
-@media (max-width: 900px) {
-  .about-me{
-  @include dFlex($fflow: column wrap,$jc: space-between, $ai: center , $g:4rem);
-  align-content: center;
-  max-width: 100vw;
-  margin: 0;
-
-
-  .info-card,.portrait-wrapper{
-    width: 90%;
-    
+@media (max-width: 768px) {
+  .section-wrapper {
+    flex-flow: column wrap;
+    align-content: center;
+    gap: 8rem;
   }
-  }
-
-  }
-
-    @media (max-width: 768px) {
-        .about-me{
-      flex-flow: column wrap;
-      align-content: center;
-      gap: 4rem;
-        }
-  } 
-  
+}
