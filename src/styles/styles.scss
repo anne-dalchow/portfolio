@@ -134,7 +134,17 @@ html {
   }
 }
 
+.section-wrapper {
+  max-width: 1300px;
+  padding: 2rem;
+  margin: 0 auto;
+  @include dFlex($jc: space-between, $ai: center);
 
+  .section-one,
+  .section-two {
+    width: 45%;
+  }
+}
 
 .header {
   font-family: 'Fira Code', monospace;
@@ -220,3 +230,6 @@ button {
   scrollbar-width: auto;
   scrollbar-color: #00a896 #1a1a1a;
 }
+
+
+
