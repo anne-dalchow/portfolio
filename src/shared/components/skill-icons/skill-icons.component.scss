@@ -1,7 +1,7 @@
 .skill-icons {
   display: flex;
   flex-wrap: wrap;         
-  justify-content: center; 
+  justify-content: flex-start; 
   gap: 2rem 4rem;               
 }
 
@@ -11,9 +11,6 @@
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  
-  flex: 0 1 80px; 
-  max-width: 120px; 
 }
 
 .skill-icons img {
@@ -99,11 +96,5 @@
   .skill-icons {
     gap: 1rem 1rem;
   }
-  
-  .skill-icons > figure,
-  .skill-icons > .tooltip-container {
-    flex: 0 1 60px;
-    max-width: 80px;
-    gap: 4px;
-  }
+
 }

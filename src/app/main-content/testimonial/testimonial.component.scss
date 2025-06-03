@@ -1,4 +1,5 @@
-.testimonial-container{
+.testimonial-container {
+  position: relative;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -8,71 +9,83 @@
   width: 100%;
 }
 
+.quotes{
+ position: absolute;
+ top: 33%;
+ right: 63%;
+ z-index: 100;
+}
+
 .slider-wrapper {
   width: 100vw;
   height: fit-content;
   overflow: hidden;
   display: flex;
   justify-content: center;
+  mask-image: linear-gradient(to right,
+      transparent,
+      black 20rem,
+      black calc(100% - 20rem),
+      transparent);
+
 
   .slider-track {
-  display: flex;
-  justify-content: center;
-  width: 100vw; 
-  transition: transform 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    transition: transform 0.5s ease-in-out;
 
-  .testimonial-card {
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  opacity: 0;
-  transform: scale(0.9);
+    .testimonial-card {
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      opacity: 0;
+      transform: scale(0.9);
+    }
+
+    .testimonial-card.scale-100 {
+      opacity: 1;
+      transform: scale(1.0);
+      z-index: 10;
+    }
+
+    .testimonial-card.scale-90 {
+      opacity: 0.5;
+      transform: scale(0.85);
+      z-index: 1;
+    }
+  }
 }
 
-.testimonial-card.scale-100 {
-  opacity: 1;
-  transform: scale(1.0);
-  z-index: 10;
-}
-
-.testimonial-card.scale-90 {
-  opacity: 0.5;
-  transform: scale(0.85);
-  z-index: 1;
-}
-}
-}
-
-
-.navigation-container{
+.navigation-container {
   display: flex;
   flex-flow: row;
   justify-content: center;
   align-items: center;
   gap: 1rem;
 
-
   .dots-container {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: white;
+    transition: background-color 0.3s ease;
+  }
+
+  .dot.active {
+    background-color: var(--accent-color);
+  }
 }
 
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: white;
-  transition: background-color 0.3s ease;
-}
-
-.dot.active {
-  background-color: var(--accent-color);
-}
-}
-
-.previous, .next{
+.previous,
+.next {
   cursor: pointer;
 
-  &:hover path{
+  &:hover path {
     fill: var(--accent-color);
   }
 }

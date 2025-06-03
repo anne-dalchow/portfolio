@@ -1,0 +1,26 @@
+@mixin dFlex($fflow: row wrap, $jc: center, $ai: center, $g: 0px) {
+  display: flex;
+  flex-flow: $fflow;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $g;
+}
+
+@mixin dFlexShort($fflow: row wrap, $g: 0px) {
+  display: flex;
+  flex-flow: $fflow;
+  gap: $g;
+}
+
+.portfolio{
+  max-width: 1300px;
+  padding: 2rem;
+  margin: 0 auto;
+  max-height: 100dvh;
+  @include dFlex($fflow: column wrap,$jc:flex-start, $ai:flex-start);
+
+  .info-card,.singleproject{
+   width: 100%;
+  }
+
+}

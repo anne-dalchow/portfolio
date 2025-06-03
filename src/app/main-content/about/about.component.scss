@@ -1,22 +1,33 @@
-@use '../../../styles/mixins.scss' as *;
+@mixin dFlex($fflow: row wrap, $jc: center, $ai: center, $g: 0px) {
+  display: flex;
+  flex-flow: $fflow;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $g;
+}
 
-
+@mixin dFlexShort($fflow: row wrap, $g: 0px) {
+  display: flex;
+  flex-flow: $fflow;
+  gap: $g;
+}
 .about-me {
-  width: 100%;
+  max-width: 1300px;
+  padding: 2rem;
+  margin: 0 auto;
   min-height: 100dvh;
   @include dFlex($jc: space-between, $ai: flex-end);
 }
 
 .portrait-wrapper {
-  flex: 1;
-  align-self: flex-start;
-  margin-top: 8rem;
+  width: 45%;
+  align-self: center;
   position: relative;
   overflow: visible;
 
+
 .portrait-container {
-  width: 100%;
-  max-width: 538px;
+
   aspect-ratio: 1 / 1; // Quadrat
   border-radius: 30px;
   overflow: hidden;
@@ -29,7 +40,7 @@
   bottom: -30px;
   left: -30px;
   width: 100%;
-  max-width: 538px;
+  height: 100%;
   aspect-ratio: 1 / 1;
   background: url('./../../../../public/images/about_me/avatar-hover-bg.png') center/cover no-repeat;
   border-radius: 30px;
@@ -71,3 +82,33 @@
 
 
 
+.info-card{
+  width: 45%;
+}
+
+
+
+@media (max-width: 900px) {
+  .about-me{
+  @include dFlex($fflow: column wrap,$jc: space-between, $ai: center , $g:4rem);
+  align-content: center;
+  max-width: 100vw;
+  margin: 0;
+
+
+  .info-card,.portrait-wrapper{
+    width: 90%;
+    
+  }
+  }
+
+  }
+
+    @media (max-width: 768px) {
+        .about-me{
+      flex-flow: column wrap;
+      align-content: center;
+      gap: 4rem;
+        }
+  } 
+  
