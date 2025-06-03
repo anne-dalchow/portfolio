@@ -47,8 +47,13 @@
         animation: rotate 500ms ease-in-out;
 
         @keyframes rotate {
-          from {rotate: 45deg;}
-          to {rotate: 0deg;}
+          from {
+            rotate: 45deg;
+          }
+
+          to {
+            rotate: 0deg;
+          }
         }
       }
     }
@@ -129,8 +134,9 @@
         @include dFlex($g: 0.25rem);
       }
     }
-    .link-btns{
-            @include dFlex($jc: flex-start, $g: 1.5rem);
+
+    .link-btns {
+      @include dFlex($jc: flex-start, $g: 1.5rem);
     }
 
   }
@@ -138,17 +144,19 @@
   .project-img-container {
     @include dFlex($fflow:column nowrap, $jc:space-between, $ai: flex-end, $g: 2rem);
 
-    .close-icon{
+    .close-icon {
       transition: transform 0.3s ease;
       cursor: pointer;
-      
+
       &:hover {
-        transform: scale(1.2);        
+        transform: scale(1.2);
+
         path {
           fill: var(--accent-color);
         }
       }
     }
+
     .project-img {
       border-radius: 30px;
       max-width: 100%;
@@ -163,9 +171,9 @@
   background-color: transparent;
   border: none;
   color: #3CCFB6;
-  
+
   img {
-    transition: all 1s ease; 
+    transition: all 1s ease;
   }
 
   &:hover {
