@@ -13,9 +13,9 @@
   @include dFlex($fflow: row nowrap, $jc:space-between);
 
   .title-container {
+    width: 70%;
     cursor: pointer;
     @include dFlex($jc:space-between);
-    width: 880px;
     padding: 40px 32px;
     border-bottom: 1px solid var(--accent-color);
 
@@ -95,7 +95,7 @@
   .inner-modal-container {
     background: rgb(11, 69, 58);
     background: linear-gradient(45deg, rgb(20, 20, 20) 40%, rgba(11, 69, 58, 1) 100%);
-    @include dFlex($fflow: row nowrap, $jc:space-between);
+    @include dFlex($fflow: row nowrap, $jc:space-between, $g: 1rem);
     max-width: 90%;
     width: 65%;
     padding: 4rem;
@@ -110,8 +110,9 @@
   }
 
   .project-text {
-    max-width: 500px;
+    order: 1;
     @include dFlex($fflow: column wrap, $ai: flex-start, $g:2rem);
+    max-width: 50%;
 
     .headlines {
       @include dFlex($fflow: column wrap, $ai: flex-start);
@@ -141,11 +142,23 @@
   }
 
   .project-img-container {
+    order: 2;
     @include dFlex($fflow:column nowrap, $jc:space-between, $ai: flex-end, $g: 2rem);
+    }
 
-    .close-icon {
+    .project-img {
+      border-radius: 30px;
+      max-width: 100%;
+      min-width: 250px;
+    }
+  }
+
+      .close-icon {
       transition: transform 0.3s ease;
       cursor: pointer;
+      position: absolute;
+      top: 40px;
+      right: 40px;
 
       &:hover {
         transform: scale(1.2);
@@ -156,16 +169,41 @@
       }
     }
 
-    .project-img {
-      border-radius: 30px;
-      max-width: 100%;
-      min-width: 300px;
-    }
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.98);
   }
 }
 
 
 #nextProject {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
   @include dFlex($g: 8px);
   background-color: transparent;
   border: none;
@@ -180,6 +218,64 @@
 
     >img {
       transform: translateX(20px);
+    }
+  }
+}
+
+
+@media(max-width:1024px) {
+  .modal-container {
+    .inner-modal-container {
+      @include dFlex($fflow: column nowrap, $jc:space-between);
+      width: 100%;
+      height: 100%;
+      padding: 3rem;
+
+      .project-text {
+        max-width: 100%;
+        order: 2;
+      }
+
+      .project-img-container {
+        order: 1;
+      }
+    }
+  }
+
+  .preview-img-container img {
+    max-width: 200px;
+  }
+
+  .preview-img-container {
+    .img-bg-hover {
+      max-width: 200px;
+    }
+
+    img {
+      max-width: 200px;
+    }
+  }
+}
+
+
+
+@media (max-width: 900px) {
+  .projects-container {
+    .preview-img-container {
+      display: none;
+    }
+
+    .title-container {
+      width: 100%;
+
+      &:hover {
+        background: transparent;
+
+        img {
+          opacity: 0;
+          animation: none;
+        }
+      }
     }
   }
 }
