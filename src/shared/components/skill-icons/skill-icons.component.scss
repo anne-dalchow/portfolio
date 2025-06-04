@@ -1,8 +1,8 @@
 .skill-icons {
-  display: flex;
-  flex-wrap: wrap;         
-  justify-content: flex-start; 
-  gap: 2rem 4rem;               
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 2rem 3rem;
+  max-height: 500px;
 }
 
 .skill-icons > figure,
@@ -11,6 +11,7 @@
   flex-direction: column;
   align-items: center;
   gap: 8px;
+  text-align: center;
 }
 
 .skill-icons img {
@@ -24,26 +25,26 @@
   transform: scale(1.2);
 }
 
-
+/* Tooltip */
 .tooltip-container {
   position: relative;
-  display: inline-block;
 
   .tooltip {
     position: absolute;
     bottom: 100%;
-    left: -5%;
+    left: 50%;
+    transform: translateX(-50%);
     background: white;
     padding: 1rem;
     border-radius: 10px;
     border: 1px solid #3dcfb6;
     color: #3dcfb6;
     text-align: center;
-    white-space: nowrap;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
     z-index: 10;
+    min-width: max-content;
 
     .icons {
       display: flex;
@@ -55,19 +56,15 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-
-
-        span {
-          font-size: 0.8rem;
-        }
+        font-size: 0.8rem;
       }
     }
 
     .arrow {
       position: absolute;
       top: 100%;
-      left: 10%;
-
+      left: 50%;
+      transform: translateX(-50%);
       width: 0;
       height: 0;
       border-left: 10px solid transparent;
@@ -78,7 +75,6 @@
 
   figure {
     cursor: pointer;
-    text-align: center;
 
     figcaption {
       font-family: 'Fira Code', monospace;
@@ -91,10 +87,24 @@
   }
 }
 
-
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .skill-icons {
-    gap: 1rem 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    max-height: fit-content;
   }
 
+  .tooltip-container .tooltip {
+    font-size: 0.8rem;
+
+    .icons {
+      flex-direction: column;
+      gap: 0.5rem;
+
+      .tech img {
+        width: 25px;
+      }
+    }
+  }
 }
