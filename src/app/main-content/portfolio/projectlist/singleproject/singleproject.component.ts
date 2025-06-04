@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { SvgButtonComponent } from "../../../../../shared/components/svg-button/svg-button.component";
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-singleproject',
-  imports: [SvgButtonComponent],
+  imports: [SvgButtonComponent, CommonModule],
   templateUrl: './singleproject.component.html',
   styleUrl: './singleproject.component.scss'
 })
@@ -22,23 +23,28 @@ export class SingleprojectComponent {
     previewImg: "/images/projects/join_preview.svg",
     img: "/images/projects/join.jpg"
   }
-
-  @Input() isModalVisible: boolean = false;  // Modal sichtbar oder nicht
+  @Input() isModalVisible: boolean = false;
 
   @Output() openModal = new EventEmitter<any>();
   @Output() closeModal = new EventEmitter<void>();
   @Output() nextProjectRequest = new EventEmitter<void>();
+
+  isAnimatingOut = false;
 
   onClick() {
     this.openModal.emit(this.project);
   }
 
   handleCloseModal() {
-    this.closeModal.emit();
+    this.isAnimatingOut = true;
+    setTimeout(() => {
+      this.isAnimatingOut = false;
+      this.closeModal.emit();
+    }, 400);
   }
 
   showNextProject(event: Event) {
-    event.stopPropagation();  // Klick nicht an Eltern weitergeben (Modal schließen verhindern)
+    event.stopPropagation();
     this.nextProjectRequest.emit();
   }
 }
