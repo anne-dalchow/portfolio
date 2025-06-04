@@ -15,6 +15,7 @@
     align-items: center;
     gap: 0.6rem;
     margin: 200px auto auto auto;
+    padding: 2rem;
 
     >p {
       font-family: 'Fira Code', sans-serif;
@@ -28,12 +29,14 @@
       align-items: center;
       gap: 2.2rem;
 
-      >h1 {
+      h1 {
         font-family: 'Karla', sans-serif;
         font-size: 7.1rem;
         letter-spacing: -0.02em;
         font-weight: 700;
         text-align: center;
+
+
       }
 
       >div {
@@ -59,8 +62,8 @@
   bottom: 0;
   mix-blend-mode: normal;
 
-  .rect{
-      cursor: pointer;
+  .rect {
+    cursor: pointer;
   }
 }
 
@@ -132,5 +135,64 @@
 
   .arrow {
     animation: slide-arrow 2s infinite ease-in-out;
+  }
+}
+
+.mailadress {
+  display: flex;
+}
+
+.mailadress-icon {
+  display: none;
+}
+
+
+@media (max-width: 900px) {
+  .hero {
+    >.hero-content {
+      >p {
+        font-size: 2rem;
+      }
+
+      >div {
+        h1 {
+          font-size: 6rem;
+        }
+
+        >div {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          gap: 48px;
+        }
+      }
+    }
+  }
+
+  .mailadress {
+    display: none;
+  }
+
+  .mailadress-icon {
+    display: flex;
+  }
+
+  .left-lateral {
+    height: 17.3rem;
+    left: 10.5%;
+  }
+
+  .right-lateral {
+    height: 25rem;
+    right: 10.5%;
+  }
+}
+
+@media (max-width: 468px) {
+  .hero {
+    >.hero-content {
+      margin: 100px auto auto auto;
+    }
   }
 }
