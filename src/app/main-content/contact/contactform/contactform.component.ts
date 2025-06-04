@@ -3,11 +3,12 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { SlideButtonComponent } from "../../../../shared/components/slide-button/slide-button.component";
+import { RouterLink } from '@angular/router';
 
 
 @Component({
   selector: 'app-contactform',
-  imports: [FormsModule, CommonModule, SlideButtonComponent],
+  imports: [FormsModule, CommonModule, SlideButtonComponent, RouterLink],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss'
 })

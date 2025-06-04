@@ -94,8 +94,7 @@
 
 @media (max-width: 768px) {
   .section-wrapper {
-    flex-flow: column wrap;
-    align-content: center;
-    gap: 8rem;
+          @include dFlex( $g:8rem);
+        margin-top: 4rem;
   }
 }

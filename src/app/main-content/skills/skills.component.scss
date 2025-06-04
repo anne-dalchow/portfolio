@@ -15,14 +15,13 @@
 #bg-skills {
   background-image: url('./../../../../public/images/backgrounds/bg_skills.svg');
   background-position: center left;
-  background-size: cover;
-  max-width: 100vw;
-  padding: 5rem 0;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
 }
 
 .section-wrapper {
   @include dFlex($jc: space-between, $ai: center);
-    min-height: 100dvh;
+    min-height: 80dvh;
 
   .section-one, .section-two {
     width: 45%;
