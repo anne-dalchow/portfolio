@@ -2,6 +2,7 @@ import { Component, computed, inject, signal } from '@angular/core';
 import { SingleTestimonialComponent } from "./single-testimonial/single-testimonial.component";
 import { TestimonallistdataService } from '../../testimonallistdata.service';
 import { CommonModule } from '@angular/common';
+import { CarouselComponent } from "../../carousel/carousel.component";
 
 @Component({
   selector: 'app-testimonial',
