@@ -1,4 +1,4 @@
-import { Component, computed, inject, signal } from '@angular/core';
+import { Component, computed, ElementRef, inject, signal, ViewChild } from '@angular/core';
 import { SingleTestimonialComponent } from "./single-testimonial/single-testimonial.component";
 import { TestimonallistdataService } from '../../testimonallistdata.service';
 import { CommonModule } from '@angular/common';
@@ -15,6 +15,7 @@ export class TestimonialComponent {
   testimonials = this.testimonallistdata.testimonallist;
 
   activeIndex = signal(0);
+  animationOffset = signal(0);
 
   visibleTestimonials = computed(() => {
     const list = this.testimonials;
@@ -26,13 +27,22 @@ export class TestimonialComponent {
   });
 
   next() {
-    const max = this.testimonials.length;
-    this.activeIndex.update((i) => (i + 1) % max);
+    this.animationOffset.set(-1);
+    setTimeout(() => {
+      const max = this.testimonials.length;
+      this.activeIndex.update((i) => (i + 1) % max);
+      this.animationOffset.set(0);
+    }, 500);
   }
 
   prev() {
-    const max = this.testimonials.length;
-    this.activeIndex.update((i) => (i - 1 + max) % max);
+    this.animationOffset.set(1);
+    setTimeout(() => {
+      const max = this.testimonials.length;
+      this.activeIndex.update((i) => (i - 1 + max) % max);
+      this.animationOffset.set(0);
+    }, 500);
   }
 
 }
+
