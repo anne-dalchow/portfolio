@@ -6,13 +6,12 @@ import { TestimonialComponent } from "./testimonial/testimonial.component";
 import { ProjectlistComponent } from "./portfolio/projectlist/projectlist.component";
 import { ContactComponent } from "./contact/contact.component";
 import { LottieComponent } from "../lottie/lottie.component";
-import { CarouselComponent } from "../carousel/carousel.component";
 
 
 
 @Component({
   selector: 'app-main-content',
-  imports: [HeroComponent, AboutComponent, SkillsComponent, ProjectlistComponent, TestimonialComponent, ProjectlistComponent, ContactComponent, LottieComponent, CarouselComponent],
+  imports: [HeroComponent, AboutComponent, SkillsComponent, ProjectlistComponent, TestimonialComponent, ProjectlistComponent, ContactComponent, LottieComponent],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss'
 })
