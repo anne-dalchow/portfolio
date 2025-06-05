@@ -1,5 +1,13 @@
 import { Component, Input } from '@angular/core';
 
+interface TestimonialInterface {
+  index: number,
+  name: string,
+  description: string,
+  jobname: string,
+
+}
+
 @Component({
   selector: 'app-single-testimonial',
   imports: [],
@@ -9,8 +17,8 @@ import { Component, Input } from '@angular/core';
 export class SingleTestimonialComponent {
   @Input() testimonial = {
     index: 1,
-    name: "Lorem",
-    description: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. Lorem Ipsum delores ",
-    jobname: "Frontend Developer",
+    name: "",
+    description: "",
+    jobname: "",
   };
 }

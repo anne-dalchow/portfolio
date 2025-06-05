@@ -12,36 +12,36 @@ import { CommonModule } from '@angular/common';
 
 export class TestimonialComponent {
   testimonallistdata = inject(TestimonallistdataService);
-  testimonials = this.testimonallistdata.testimonallist;
+  testimonials = this.testimonallistdata.testimoniallist;
 
-  activeIndex = signal(0);
-  animationOffset = signal(0);
+  currentSlide = 0;
 
-  visibleTestimonials = computed(() => {
-    const list = this.testimonials;
-    const current = this.activeIndex();
-    const prev = (current - 1 + list.length) % list.length;
-    const next = (current + 1) % list.length;
+  private startX = 0;
+  private threshold = 50;
 
-    return [list[prev], list[current], list[next]];
-  });
-
-  next() {
-    this.animationOffset.set(-1);
-    setTimeout(() => {
-      const max = this.testimonials.length;
-      this.activeIndex.update((i) => (i + 1) % max);
-      this.animationOffset.set(0);
-    }, 300);
+  nextSlide() {
+    this.currentSlide = (this.currentSlide + 1) % this.testimonials.length;
   }
 
-  prev() {
-    this.animationOffset.set(1);
-    setTimeout(() => {
-      const max = this.testimonials.length;
-      this.activeIndex.update((i) => (i - 1 + max) % max);
-      this.animationOffset.set(0);
-    }, 300);
+  prevSlide() {
+    this.currentSlide = (this.currentSlide - 1 + this.testimonials.length) % this.testimonials.length;
+  }
+
+  goToSlide(index: number) {
+    this.currentSlide = index;
+  }
+
+  onTouchStart(event: TouchEvent) {
+    this.startX = event.touches[0].clientX;
+  }
+
+  onTouchEnd(event: TouchEvent) {
+    const deltaX = event.changedTouches[0].clientX - this.startX;
+    if (deltaX > this.threshold) {
+      this.prevSlide();
+    } else if (deltaX < -this.threshold) {
+      this.nextSlide();
+    }
   }
 }
 

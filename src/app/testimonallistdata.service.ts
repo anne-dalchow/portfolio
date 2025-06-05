@@ -7,7 +7,7 @@ export class TestimonallistdataService {
 
   constructor() { }
 
-  testimonallist = [
+  testimoniallist = [
     {
       index: 5,
       name: "A.Fischer",
