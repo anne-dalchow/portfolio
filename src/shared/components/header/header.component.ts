@@ -15,7 +15,7 @@ export class HeaderComponent {
 
   onLanguageChange(lang: 'en' | 'de') {
     this.language = lang;
-    // Optional: Event oder Service zum Sprachwechsel (i18n)
+
     console.log('Sprache gewechselt zu:', lang);
   }
 

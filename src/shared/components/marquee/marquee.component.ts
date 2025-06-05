@@ -10,6 +10,6 @@ import {
   templateUrl: './marquee.component.html',
   styleUrl: './marquee.component.scss'
 })
-export class MarqueeComponent{
+export class MarqueeComponent {
 
 }
