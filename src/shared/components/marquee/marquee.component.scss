@@ -1,6 +1,7 @@
 
 .marquee {
-  max-width: 2500px;
+
+  width: 100%;
   position: absolute;
   left: 50%;
   transform: translateX(-50%) rotate(-3deg);
@@ -26,6 +27,7 @@
   padding: 1rem 2rem;
   border-radius: 0.25rem;
   text-align: center;
+    overflow: hidden;
 }
 
 li{
