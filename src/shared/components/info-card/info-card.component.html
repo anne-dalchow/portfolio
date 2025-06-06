@@ -1,8 +1,8 @@
 <div #wrapper class="wrapper-info-card" [ngClass]="{ 'animate': isVisible }" [style.--translate-x]="translateX">
-  <p class="info-card-subtitle">{{ subtitle }}</p>
+  <p class="info-card-subtitle">{{ subtitle | translate }}</p>
 
   <div class="info-card" [style.--bg-color]="bgcolor" [style.--border]="border" [style.--padding]="padding">
-    <h2 class="info-card-title">{{ title }}</h2>
+    <h2 class="info-card-title">{{ title | translate }}</h2>
     <div class="info-card-content">
       <ng-content></ng-content>
     </div>

@@ -68,9 +68,9 @@
 }
 
 .section-two{
-  @include dFlexShort($fflow: column nowrap, $g: 32px);
+  @include dFlexShort($fflow: column nowrap, $g: 2rem);
 
-  >.description {
+  .description {
     @include dFlexShort($fflow: column nowrap, $g: 16px);
 
     >div {

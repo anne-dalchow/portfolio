@@ -4,11 +4,12 @@ import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { SlideButtonComponent } from "../../../../shared/components/slide-button/slide-button.component";
 import { RouterLink } from '@angular/router';
+import { TranslatePipe } from '@ngx-translate/core';
 
 
 @Component({
   selector: 'app-contactform',
-  imports: [FormsModule, CommonModule, SlideButtonComponent, RouterLink],
+  imports: [FormsModule, CommonModule, SlideButtonComponent, RouterLink, TranslatePipe],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss'
 })

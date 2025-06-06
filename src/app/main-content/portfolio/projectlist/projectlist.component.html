@@ -1,10 +1,7 @@
 <section class="section-wrapper">
-  <app-info-card class="info-card" subtitle="Portfolio" title="Featured Projects" maxwidth="880px" bgcolor="transparent"
-    border="none" padding="0">
-    <p>
-      Explore a selection of my work here - <br />
-      Interact with projects to see my skills in action.
-    </p>
+  <app-info-card class="info-card" subtitle="portfolio.subtitle" title="portfolio.title" maxwidth="880px"
+    bgcolor="transparent" border="none" padding="0">
+    <p [innerHTML]="'portfolio.intro' | translate "></p>
   </app-info-card>
 
   @for (project of projectlistdata.projectlist; track $index) {

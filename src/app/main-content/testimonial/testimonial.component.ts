@@ -1,19 +1,26 @@
-import { Component, computed, inject, signal } from '@angular/core';
+import { Component, computed, inject, OnInit, signal } from '@angular/core';
 import { SingleTestimonialComponent } from "./single-testimonial/single-testimonial.component";
-import { TestimonallistdataService } from '../../testimonallistdata.service';
+import { TestimonallistdataService, Testimonial } from '../../testimonallistdata.service';
 import { CommonModule } from '@angular/common';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-testimonial',
-  imports: [SingleTestimonialComponent, CommonModule],
+  standalone: true,
+  imports: [SingleTestimonialComponent, CommonModule, TranslatePipe],
   templateUrl: './testimonial.component.html',
   styleUrl: './testimonial.component.scss'
 })
 
-export class TestimonialComponent {
-  testimonallistdata = inject(TestimonallistdataService);
-  testimonials = this.testimonallistdata.testimoniallist;
+export class TestimonialComponent implements OnInit {
 
+  testimonials: Testimonial[] = [];
+
+  constructor(private testimonialService: TestimonallistdataService) { }
+
+  ngOnInit(): void {
+    this.testimonials = this.testimonialService.testimoniallist;
+  }
   currentSlide = 0;
 
   private startX = 0;

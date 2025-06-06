@@ -18,11 +18,10 @@
   @if (btnHref) {
   <a href="{{btnHref}}">
     <div class="btn btn-two">
-      {{text}}
+      {{ text | translate }}
     </div>
   </a>
   } @else {
-  <button type="{{buttonType}}" class="btn btn-two">{{text}}</button>
+  <button type="{{buttonType}}" class="btn btn-two">{{ text | translate }}</button>
   }
-
 </div>

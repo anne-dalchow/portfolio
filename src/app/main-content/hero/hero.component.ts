@@ -6,7 +6,8 @@ import { MarqueeComponent } from '../../../shared/components/marquee/marquee.com
 
 @Component({
   selector: 'app-hero',
-  imports: [HeaderComponent,  MarqueeComponent,HoverDotComponent,SlideButtonComponent,],
+  standalone: true,
+  imports: [HeaderComponent, MarqueeComponent, HoverDotComponent, SlideButtonComponent],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss'
 })

@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-info-card',
-  imports: [CommonModule],
+  imports: [TranslatePipe, TranslateModule, CommonModule],
   templateUrl: './info-card.component.html',
   styleUrl: './info-card.component.scss'
 })

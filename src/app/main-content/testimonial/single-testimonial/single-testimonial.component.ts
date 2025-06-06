@@ -1,24 +1,17 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-
-interface TestimonialInterface {
-  index: number,
-  name: string,
-  description: string,
-  jobname: string,
-
-}
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-single-testimonial',
-  imports: [],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './single-testimonial.component.html',
   styleUrl: './single-testimonial.component.scss'
 })
 export class SingleTestimonialComponent {
-  @Input() testimonial = {
-    index: 1,
-    name: "",
-    description: "",
-    jobname: "",
+  @Input() testimonial!: {
+    key: string;
+    index: number;
+    name: string;
   };
 }

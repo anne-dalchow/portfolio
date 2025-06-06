@@ -1,18 +1,14 @@
 <div id="bg-skills">
 
   <section class="section-wrapper">
-    <app-info-card class="info-card section-one" subtitle="Technologies" title="Skill Set">
+    <app-info-card class="info-card section-one" subtitle="skills.subtitle" title="skills.title">
       <div class="description-wrapper">
-        <p>
-          I’m experienced with various front-end and design tools, and I’m always eager to learn
-          new technologies. Keeping up with the rapid changes in web development is important to
-          me, and I enjoy adapting quickly to stay current and deliver the best results.
-        </p>
+        <p>{{ 'skills.intro' | translate }}</p>
         <div class="description">
-          <p class="bold">You need <span class="bold-accent-color">another skill?</span></p>
-          <p>Feel free to contact me. I look forward to expanding on my previous knowledge.</p>
+          <p class="bold" [innerHTML]="'skills.question' | translate"></p>
+          <p>{{ 'skills.invitation' | translate }}</p>
         </div>
-        <app-slide-button text="Let's Talk" btnHref="#contact"></app-slide-button>
+        <app-slide-button text="skills.button" btnHref="#contact"></app-slide-button>
       </div>
     </app-info-card>
     <app-skill-icons class="skill-icons-container section-two"></app-skill-icons>

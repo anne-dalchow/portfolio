@@ -3,10 +3,11 @@ import { SingleprojectComponent } from "./singleproject/singleproject.component"
 import { ProjectlistdataService } from '../../../projectlistdata.service';
 import { CommonModule } from '@angular/common';
 import { InfoCardComponent } from "../../../../shared/components/info-card/info-card.component";
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-projectlist',
-  imports: [SingleprojectComponent, CommonModule, InfoCardComponent],
+  imports: [TranslatePipe, SingleprojectComponent, CommonModule, InfoCardComponent],
   templateUrl: './projectlist.component.html',
   styleUrl: './projectlist.component.scss'
 })

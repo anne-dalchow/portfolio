@@ -1,12 +1,9 @@
 <section class="section-wrapper">
-  <app-info-card class="section-one" subtitle="Contact me" title="Let's work together" bgcolor="transparent"
-    border="none" padding="0">
-    <p class="bold-accent-color">Got a problem to solve?</p><br>
-    <p>
-      Encourage people to contact you and describe what role you are interested in. Show that you will add value to
-      their projects through your work.
-    </p><br>
-    <p>Need a Frontend developer? <span class="accent-color">Let’s talk!</span></p>
+  <app-info-card class="section-one" [subtitle]="'contactSection.subtitle' | translate"
+    [title]="'contactSection.title' | translate" bgcolor="transparent" border="none" padding="0">
+    <p class="bold-accent-color" [innerHTML]="'contactSection.boldText' | translate"></p><br>
+    <p [innerHTML]="'contactSection.description' | translate"></p><br>
+    <p [innerHTML]="'contactSection.callToAction' | translate"></p>
   </app-info-card>
 
   <app-contactform class="section-two"></app-contactform>
