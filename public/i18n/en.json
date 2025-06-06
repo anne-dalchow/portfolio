@@ -1,0 +1,115 @@
+{
+ "hero":{
+  "checkWork": "Check my work",
+  "contactMe": "Contact me"
+ },
+  "about": {
+    "title": "About me",
+    "subtitle": "Who I Am",
+    "intro": "Hey there, I'm Anne! <br />I found my passion for coding through design. <br />I love turning ideas into real, working things. Learning to code is a never-ending journey, and what keeps me going is the sense of progress I feel after every little breakthrough and the excitement of turning challenges into solutions.",
+    "location": "I'm based in Leipzig, Germany, and open to working both locally and remotely.",
+    "learning": "I'm always curious to learn new technologies and enjoy the challenge of figuring things out. Learning and growing is what drives me.",
+    "creativity": "I approach problems with creativity and persistence. I love bouncing ideas off others — it's one of the best ways to grow."
+  },
+  "skills": {
+    "title": "Skill Set",
+    "subtitle": "Technologies",
+    "intro": "I’m experienced with various front-end and design tools, and I’m always eager to learn new technologies. Keeping up with the rapid changes in web development is important to me, and I enjoy adapting quickly to stay current and deliver the best results.",
+    "question": "You need <span class='bold-accent-color'>another skill?</span>",
+    "invitation": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
+    "button": "Let's Talk"
+  }
+,
+  "portfolio": {
+    "subtitle": "Portfolio",
+    "title": "Featured Projects",
+    "intro": "Explore a selection of my work here - <br />Interact with projects to see my skills in action."
+  },
+  "projects": {
+    "join": {
+      "name": "Join",
+      "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+      "techStack": {
+        "CSS": "CSS",
+        "HTML": "HTML",
+        "Firebase": "Firebase",
+        "Angular": "Angular",
+        "TypeScript": "TypeScript"
+      }
+    },
+    "el_pollo_loco": {
+      "name": "El Pollo Loco",
+      "description": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+      "techStack": {
+        "CSS": "CSS",
+        "HTML": "HTML",
+        "JavaScript": "JavaScript"
+      }
+    },
+    "da_bubble": {
+      "name": "DA Bubble",
+      "description": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.",
+      "techStack": {
+        "CSS": "CSS",
+        "HTML": "HTML",
+        "Angular": "Angular",
+        "TypeScript": "TypeScript"
+      }
+    }
+  },
+  "project": {
+  "about": "What is this project about?",
+  "next": "Next Project"
+},
+"testimonial": {
+  "title": "What my teammates say",
+  "t1": {
+    "description": "I had the good fortune of working with Lukas in a group project...",
+    "jobname": "Frontend Developer"
+  },
+  "t2": {
+    "description": "Anne was incredibly helpful and organized...",
+    "jobname": "UX Designer"
+  },
+    "t3": {
+    "description": "I had the good fortune of working with Lukas in a group project...",
+    "jobname": "Frontend Developer"
+  },
+  "t4": {
+    "description": "Anne was incredibly helpful and organized...",
+    "jobname": "UX Designer"
+  },
+    "t5": {
+    "description": "I had the good fortune of working with Lukas in a group project...",
+    "jobname": "Frontend Developer"
+  }
+},
+   "contactSection": {
+    "subtitle": "Kontaktiere mich",
+    "title": "Lass uns zusammenarbeiten",
+    "boldText": "Hast du ein Problem zu lösen?",
+    "description": "Ermutige Leute, dich zu kontaktieren und beschreibe, für welche Rolle du dich interessierst. Zeige, dass du durch deine Arbeit Mehrwert für ihre Projekte bringst.",
+    "callToAction": "Frontend Entwickler gesucht? <span class='accent-color'>Lass uns reden!</span>"
+  },
+    "contactForm": {
+    "labels": {
+      "name": "Wie heißt du?",
+      "email": "Wie lautet deine E-Mail?",
+      "message": "Wie kann ich dir helfen?"
+    },
+    "placeholders": {
+      "name": "Dein Name hier",
+      "email": "deine@email.de",
+      "message": "Hallo Anne, ich interessiere mich für..."
+    },
+    "warnings": {
+      "nameRequired": "Bitte gib deinen Namen ein",
+      "emailValid": "Bitte gib eine gültige E-Mail ein",
+      "messageRequired": "Bitte gib eine Nachricht ein"
+    },
+    "privacyTextBeforeLink": "I've read the",
+    "privacyLinkText": "privacy policy",
+    "privacyTextAfterLink": "and agree to the processing of my data as outlined."
+  }
+
+}
