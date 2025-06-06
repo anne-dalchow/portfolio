@@ -1,44 +1,20 @@
 import { Injectable } from '@angular/core';
 
+export interface Testimonial {
+  key: string;
+  index: number;
+  name: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
 export class TestimonallistdataService {
-
-  constructor() { }
-
-  testimoniallist = [
-    {
-      index: 5,
-      name: "A.Fischer",
-      description: " Text 3: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
-      jobname: "Team Partner"
-    },
-    {
-      index: 1,
-      name: "T.Schulz",
-      description: "I had the good fortune of working with Lukas in a group project at the Developer Akademie that involved a lot of effort. He always stayed calm, cool, and focused, and made sure our team was set up for success. He's super knowledgeable, easy to work with, and I'd happily work with him again given the chance.",
-      jobname: "Frontend Developer"
-    },
-    {
-      index: 2,
-      name: "H.Janisch",
-      description: "Text2: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
-      jobname: "Team Partner"
-    },
-    {
-      index: 3,
-      name: "A.Fischer",
-      description: " Text 3: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam",
-      jobname: "Team Partner"
-    },
-    {
-      index: 4,
-      name: "T.Schulz",
-      description: "I had the good fortune of working with Lukas in a group project at the Developer Akademie that involved a lot of effort. He always stayed calm, cool, and focused, and made sure our team was set up for success. He's super knowledgeable, easy to work with, and I'd happily work with him again given the chance.",
-      jobname: "Frontend Developer"
-    },
-  ]
+  testimoniallist: Testimonial[] = [
+    { key: 't1', index: 1, name: "T. Schulz" },
+    { key: 't2', index: 2, name: "A. Becker" },
+    { key: 't3', index: 3, name: "M. Meier" },
+    { key: 't4', index: 4, name: "S. Roth" },
+    { key: 't5', index: 5, name: "L. König" }
+  ];
 }
-
-
