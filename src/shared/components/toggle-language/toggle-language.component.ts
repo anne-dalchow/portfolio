@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component,EventEmitter,Input,Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-toggle-language',
@@ -8,11 +9,22 @@ import { Component,EventEmitter,Input,Output } from '@angular/core';
   styleUrl: './toggle-language.component.scss'
 })
 export class ToggleLanguageComponent {
-  @Input() activeLanguage: 'en' | 'de' = 'en';
-  @Output() languageChange = new EventEmitter<'en' | 'de'>();
+  currentLang: 'en' | 'de' = 'en';
 
-  toggleLanguage() {
-    this.activeLanguage = this.activeLanguage === 'en' ? 'de' : 'en';
-    this.languageChange.emit(this.activeLanguage);
+  constructor(private translate: TranslateService) {
+    const browserLang = navigator.language.slice(0, 2);
+
+    if (browserLang === 'de' || browserLang === 'en') {
+      this.currentLang = browserLang;
+    } else {
+      this.currentLang = 'en';
+    }
+
+    this.translate.use(this.currentLang);
+  }
+
+  toggleLanguage(language: 'en' | 'de') {
+    this.currentLang = language;
+    this.translate.use(language);
   }
 }
