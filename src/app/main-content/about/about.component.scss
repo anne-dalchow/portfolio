@@ -68,7 +68,10 @@
 }
 
 .section-two{
-  @include dFlexShort($fflow: column nowrap, $g: 2rem);
+
+  .intro{
+    margin-bottom: 2rem;
+  }
 
   .description {
     @include dFlexShort($fflow: column nowrap, $g: 16px);
