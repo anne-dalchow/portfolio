@@ -13,7 +13,7 @@
   @include dFlex($jc: space-between, $ai: flex-start);
 
   .section-one, .section-two{
-   width: 45%;
+   max-width: 45%;
   }
 }
 

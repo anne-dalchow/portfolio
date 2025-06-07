@@ -13,7 +13,9 @@ header {
 
   >img {
     cursor: pointer;
-    max-width: 150px;
+  max-width: 150px;
+  width: 100%;
+  height: auto;
   }
 
   #nav-icon {
@@ -75,7 +77,8 @@ header {
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.9);
+background: #123F39;
+background: linear-gradient(180deg, rgba(18, 63, 57, 1) 0%, rgba(13, 43, 39, 1) 37%, rgba(28, 28, 28, 1) 75%);
     padding: 2.5rem 2rem;
     border-radius: 0.5rem;
     display: flex;
@@ -127,10 +130,15 @@ header {
       transform: none;
       display: flex;
       gap: 1.6rem;
+        padding: 1rem 1.5rem;
 
       nav {
         flex-direction: row;
       }
     }
   }
+}
+
+@media (max-width: 500px){
+  header{padding: 1rem 2rem;}
 }

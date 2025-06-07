@@ -11,14 +11,6 @@ import { RouterLink } from '@angular/router';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  language: 'en' | 'de' = 'en';
-
-  onLanguageChange(lang: 'en' | 'de') {
-    this.language = lang;
-
-    console.log('Sprache gewechselt zu:', lang);
-  }
-
   isOpen = false;
   toggleMenu(): void {
     this.isOpen = !this.isOpen;
