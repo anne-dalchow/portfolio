@@ -4,19 +4,19 @@
   "contactMe": "Schreibe mir"
  },
   "about": {
-    "title": "Über mich",
-    "subtitle": "Wer bin ich",
-    "intro": "Hey, ich bin Anne! <br />Über das Design habe ich meine Leidenschaft fürs Coden entdeckt. <br />Ich liebe es, Ideen in funktionierende Projekte zu verwandeln. Coden zu lernen ist eine Reise ohne Ende – was mich antreibt, ist das Gefühl von Fortschritt nach jedem kleinen Aha-Moment und die Freude, Herausforderungen in Lösungen zu verwandeln.",
-    "location": "Ich lebe in Leipzig und bin offen für lokale oder remote Zusammenarbeit.",
-    "learning": "Ich bin immer neugierig auf neue Technologien und liebe es, Dinge herauszufinden. Lernen und Fortschritt treibt mich an.",
-    "creativity": "Ich gehe Probleme mit Kreativität und Ausdauer an. Der Austausch mit anderen ist für mich eine der besten Möglichkeiten, zu wachsen."
-  },
+  "title": "Über mich",
+  "subtitle": "Wer bin ich",
+  "intro": "Hey, ich bin Anne! Design war mein Einstieg, das Coden meine Leidenschaft. Ich genieße es, aus Ideen funktionierende Anwendungen zu schaffen. Für mich ist Programmieren eine Reise ohne Ende. Jeder Fortschritt und jede Lösung motivieren mich, weiterzumachen.",
+  "location": "Ich lebe in Leipzig und bin offen für Zusammenarbeit – egal ob vor Ort oder remote.",
+  "learning": "Ich bin immer neugierig auf neue Technologien und liebe es, Dinge herauszufinden. Lernen und Weiterentwicklung treiben mich an.",
+  "creativity": "Probleme packe ich kreativ und mit Ausdauer an. Der Austausch mit anderen inspiriert mich und hilft mir, stetig zu wachsen."
+},
   "skills": {
-    "title": "Fähigkeiten",
+    "title": "Skills",
     "subtitle": "Technologien",
     "intro": "Ich habe Erfahrung mit verschiedenen Frontend- und Design-Tools und bin immer offen dafür, neue Technologien zu lernen. Es ist mir wichtig, mit den schnellen Entwicklungen im Web Schritt zu halten – ich passe mich gern an, um aktuelle und hochwertige Ergebnisse zu liefern.",
     "question": "Du brauchst <span class='bold-accent-color'>eine andere Fähigkeit?</span>",
-    "invitation": "Melde dich gern bei mir – ich freue mich darauf, mein Wissen zu erweitern.",
+    "invitation": "Melde dich gern bei mir. Ich freue mich darauf, mein Wissen zu erweitern.",
     "button": "Schreibe mir"
   },
  "portfolio": {
@@ -62,33 +62,35 @@
 },
 "testimonial": {
   "title": "Was meine Teamkollegen sagen",
-  "t1": {
-    "description": "Ich hatte das Glück, mit Lukas in einem Gruppenprojekt zusammenzuarbeiten...",
-    "jobname": "Frontend-Entwickler"
-  },
-  "t2": {
-    "description": "Anne war unglaublich hilfsbereit und organisiert...",
-    "jobname": "UX-Designerin"
-  },
-  "t3": {
-    "description": "Ich hatte das Glück, mit Lukas in einem Gruppenprojekt zusammenzuarbeiten...",
-    "jobname": "Frontend-Entwickler"
-  },
-  "t4": {
-    "description": "Anne war unglaublich hilfsbereit und organisiert...",
-    "jobname": "UX-Designerin"
-  },
-  "t5": {
-    "description": "Ich hatte das Glück, mit Lukas in einem Gruppenprojekt zusammenzuarbeiten...",
-    "jobname": "Frontend-Entwickler"
-  }
-},  "contactSection": {
-    "subtitle": "Kontaktiere mich",
-    "title": "Lass uns zusammenarbeiten",
-    "boldText": "Hast du ein Problem zu lösen?",
-    "description": "Ermutige Leute, dich zu kontaktieren und beschreibe, für welche Rolle du dich interessierst. Zeige, dass du durch deine Arbeit Mehrwert für ihre Projekte bringst.",
-    "callToAction": "Frontend Entwickler gesucht? <span class='accent-color'>Lass uns reden!</span>"
-  },
+"t1": {
+  "description": "1: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+  "jobname": "Frontend-Entwickler"
+},
+"t2": {
+  "description": "2: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+  "jobname": "UX-Designerin"
+},
+"t3": {
+  "description": "3: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+  "jobname": "Frontend-Entwickler"
+},
+"t4": {
+  "description": "4: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+  "jobname": "UX-Designerin"
+},
+"t5": {
+  "description": "5: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+  "jobname": "Frontend-Entwickler"
+}
+
+}, "contactSection": {
+  "subtitle": "Kontaktiere mich",
+  "title": "Lass uns zusammen arbeiten",
+  "boldText": "Suchst du eine motivierte Junior Frontend Developerin?",
+  "description": "Ich bringe frischen Wind ins Team und liefere kreative, saubere Lösungen – perfekt für langfristige Zusammenarbeit.",
+  "callToAction": "Neugierig? <span class='accent-color'>Schreib mir gerne!</span>"
+}
+,
     "contactForm": {
     "labels": {
       "name": "Wie heißt du?",

@@ -3,22 +3,25 @@
   "checkWork": "Check my work",
   "contactMe": "Contact me"
  },
-  "about": {
-    "title": "About me",
-    "subtitle": "Who I Am",
-    "intro": "Hey there, I'm Anne! <br />I found my passion for coding through design. <br />I love turning ideas into real, working things. Learning to code is a never-ending journey, and what keeps me going is the sense of progress I feel after every little breakthrough and the excitement of turning challenges into solutions.",
-    "location": "I'm based in Leipzig, Germany, and open to working both locally and remotely.",
-    "learning": "I'm always curious to learn new technologies and enjoy the challenge of figuring things out. Learning and growing is what drives me.",
-    "creativity": "I approach problems with creativity and persistence. I love bouncing ideas off others — it's one of the best ways to grow."
-  },
-  "skills": {
-    "title": "Skill Set",
-    "subtitle": "Technologies",
-    "intro": "I’m experienced with various front-end and design tools, and I’m always eager to learn new technologies. Keeping up with the rapid changes in web development is important to me, and I enjoy adapting quickly to stay current and deliver the best results.",
-    "question": "You need <span class='bold-accent-color'>another skill?</span>",
-    "invitation": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
-    "button": "Let's Talk"
-  }
+ "marquee":{
+  
+ },
+"about": {
+  "title": "About Me",
+  "subtitle": "Who I Am",
+  "intro": "Hey, I'm Anne! Design was my starting point, coding quickly became my passion. I enjoy turning ideas into working applications. For me, programming is a never-ending journey. Every step forward and every solution motivates me to keep going.",
+  "location": "I live in Leipzig and am open to collaboration, whether on-site or remote.",
+  "learning": "I'm always curious about new technologies and love figuring things out. Learning and growth drive me.",
+  "creativity": "I approach problems with creativity and persistence. Collaborating with others inspires me and helps me grow continuously."
+},
+"skills": {
+  "title": "Skills",
+  "subtitle": "Technologies",
+  "intro": "I have experience with various frontend and design tools and am always open to learning new technologies. Staying up to date with the fast pace of the web is important to me. I adapt easily to deliver current and high-quality results.",
+  "question": "Do you need <span class='bold-accent-color'>another skill?</span>",
+  "invitation": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
+  "button": "Let's Talk"
+}
 ,
   "portfolio": {
     "subtitle": "Portfolio",
@@ -62,50 +65,51 @@
   "next": "Next Project"
 },
 "testimonial": {
-  "title": "What my teammates say",
-  "t1": {
-    "description": "I had the good fortune of working with Lukas in a group project...",
-    "jobname": "Frontend Developer"
-  },
-  "t2": {
-    "description": "Anne was incredibly helpful and organized...",
-    "jobname": "UX Designer"
-  },
-    "t3": {
-    "description": "I had the good fortune of working with Lukas in a group project...",
-    "jobname": "Frontend Developer"
-  },
-  "t4": {
-    "description": "Anne was incredibly helpful and organized...",
-    "jobname": "UX Designer"
-  },
-    "t5": {
-    "description": "I had the good fortune of working with Lukas in a group project...",
-    "jobname": "Frontend Developer"
-  }
+  "title": "What my colleagues say about me",
+"t1": {
+  "description": "1: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+  "jobname": "Frontend Devoloper"
 },
-   "contactSection": {
-    "subtitle": "Kontaktiere mich",
-    "title": "Lass uns zusammenarbeiten",
-    "boldText": "Hast du ein Problem zu lösen?",
-    "description": "Ermutige Leute, dich zu kontaktieren und beschreibe, für welche Rolle du dich interessierst. Zeige, dass du durch deine Arbeit Mehrwert für ihre Projekte bringst.",
-    "callToAction": "Frontend Entwickler gesucht? <span class='accent-color'>Lass uns reden!</span>"
-  },
+"t2": {
+  "description": "2: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+  "jobname": "UX Designer"
+},
+"t3": {
+  "description": "3: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+  "jobname": "Frontend Devoloper"
+},
+"t4": {
+  "description": "4: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+  "jobname": "UX Designer"
+},
+"t5": {
+  "description": "5: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+  "jobname": "Frontend Devoloper"
+}
+},
+"contactSection": {
+  "subtitle": "Contact me",
+  "title": "Let's work together",
+  "boldText": "Looking for a motivated Junior Frontend Developer?",
+  "description": "I bring fresh energy to the team and deliver creative, clean solutions – perfect for long-term collaboration.",
+  "callToAction": "Curious? <span class='accent-color'>Feel free to write to me!</span>"
+},
     "contactForm": {
     "labels": {
-      "name": "Wie heißt du?",
-      "email": "Wie lautet deine E-Mail?",
-      "message": "Wie kann ich dir helfen?"
+      "name": "What's your name?",
+      "email": "What's your email?",
+      "message": "How can I help you?"
     },
     "placeholders": {
-      "name": "Dein Name hier",
-      "email": "deine@email.de",
-      "message": "Hallo Anne, ich interessiere mich für..."
+      "name": "Your name goes here",
+      "email": "youremail@email.com",
+      "message": "Hello Anne, I'm interested in..."
     },
     "warnings": {
-      "nameRequired": "Bitte gib deinen Namen ein",
-      "emailValid": "Bitte gib eine gültige E-Mail ein",
-      "messageRequired": "Bitte gib eine Nachricht ein"
+      "nameRequired": "Oops! it seems your name is missing ",
+      "emailValid": "Hoppla! your email is required",
+      "messageRequired": "What do you need to develop?",
+      "privacyPolicyRequired": "Please accept the privacy policy."
     },
     "privacyTextBeforeLink": "I've read the",
     "privacyLinkText": "privacy policy",
