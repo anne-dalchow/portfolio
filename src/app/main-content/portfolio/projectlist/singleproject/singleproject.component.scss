@@ -10,7 +10,7 @@
   position: relative;
   width: 100%;
   height: max-content;
-  @include dFlex($fflow: row wrap, $jc: space-between);
+  @include dFlex($fflow: row wrap, $jc: flex-start);
 
   .title-container {
     width: clamp(250px, 65%, 800px);
@@ -277,6 +277,10 @@
     }
     .title-container {
       width: 100%;
+              flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 1rem;
       &:hover {
         background: transparent;
         img {
@@ -287,3 +291,11 @@
     }
   }
 }
+
+
+@media (max-width: 500px){
+      .title-container{
+        div{
+          font-size: 1rem;
+        display: flex;}
+}}
