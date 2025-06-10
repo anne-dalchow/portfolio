@@ -1,4 +1,4 @@
-@mixin dFlex($fflow: row wrap, $jc: center, $ai: center, $g: 0px) {
+@mixin dFlex($fflow: row wrap, $jc: flex-start, $ai: center, $g: 0px) {
   display: flex;
   flex-flow: $fflow;
   justify-content: $jc;
@@ -71,7 +71,7 @@
       right: clamp(-20px, -2vw, -15px);
       bottom: clamp(-20px, -2vw, -15px);
       transition: opacity 400ms ease-in-out;
-      max-width: clamp(150px, 20vw, 200px);
+      max-width: clamp(150px, 20vw, 400px);
     }
 
     img {
@@ -81,7 +81,7 @@
       right: 0;
       bottom: 0;
       transition: opacity 300ms ease-in-out;
-      max-width: clamp(150px, 20vw, 200px);
+      max-width: clamp(150px, 20vw, 400px);
     }
   }
 }
@@ -99,9 +99,10 @@
   .inner-modal-container {
     background: rgb(11, 69, 58);
     background: linear-gradient(45deg, rgb(20, 20, 20) 40%, rgba(11, 69, 58, 1) 100%);
-    @include dFlex($fflow: row nowrap, $g: 1rem);
+    @include dFlex($fflow: column nowrap, $ai: flex-end, $g: 2rem);
     width: 70vw;
-    height: 80vh;
+    max-height: 100vh;
+    overflow-y: auto;
     max-width: 100vw;
     padding: clamp(1rem, 2vw, 3rem);
     position: absolute;
@@ -113,10 +114,17 @@
     border: 1px solid var(--accent-color);
   }
 
+  .project-img-text-container {
+    @include dFlex($fflow: row nowrap, $jc: space-between, $ai: center, $g: 2rem);
+    width: 100%;
+    max-width: 100%;
+  }
+
   .project-text {
+    flex: 1;
+    max-width: 50%;
     order: 1;
     @include dFlex($fflow: column wrap, $ai: flex-start, $g: clamp(1rem, 1.5vw, 2rem));
-    max-width: clamp(250px, 50%, 600px);
 
     .headlines {
       @include dFlex($fflow: column wrap, $ai: flex-start);
@@ -134,7 +142,7 @@
     .tech-stack-images {
       @include dFlex($jc: flex-start, $g: 1rem);
 
-      > div {
+      >div {
         @include dFlex($g: 0.25rem);
       }
     }
@@ -145,41 +153,31 @@
   }
 
   .project-img-container {
+    flex: 1;
+    max-width: 50%;
     order: 2;
-    @include dFlex($fflow: column nowrap, $jc: space-between, $ai: flex-end, $g: 2rem);
+    @include dFlex($fflow: column nowrap, $jc: flex-start, $ai: flex-end, $g: 2rem);
   }
 
   .project-img {
-    border-radius: clamp(15px, 2vw, 30px);
     max-width: 100%;
-    min-width: clamp(200px, 50%, 600px);
+    height: auto;
+    border-radius: clamp(15px, 2vw, 30px);
   }
 
-.close-icon-wrapper {
-  background-color: hsla(0, 0%, 12%, 0.5); 
-  border-radius: 50%;          
-  width: 2rem;          
-  height: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
+  .close-icon {
+    cursor: pointer;
+    transition: transform 0.3s ease;
 
-  position: absolute;
-  top: clamp(20px, 3vw, 40px);
-  right: clamp(20px, 3vw, 40px);
-
-  transition: transform 0.3s ease;
-
-  &:hover {
-    transform: scale(1.2);
-
-    .close-icon path {
+    path {
       fill: var(--accent-color);
-        cursor: pointer;
+      cursor: pointer;
+    }
+
+    &:hover {
+      transform: scale(1.2);
     }
   }
-}
 }
 
 .fade-in {
@@ -195,6 +193,7 @@
     opacity: 0;
     transform: translate(-50%, -48%) scale(0.98);
   }
+
   100% {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
@@ -206,6 +205,7 @@
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
   }
+
   100% {
     opacity: 0;
     transform: translate(-50%, -48%) scale(0.98);
@@ -213,13 +213,11 @@
 }
 
 #nextProject {
-  position: absolute;
-  bottom: clamp(20px, 3vw, 40px);
-  right: clamp(20px, 3vw, 40px);
   @include dFlex($g: 8px);
   background-color: transparent;
   border: none;
   color: #3CCFB6;
+  order: 3;
 
   img {
     transition: all 1s ease;
@@ -228,7 +226,7 @@
   &:hover {
     color: white;
 
-    > img {
+    >img {
       transform: translateX(20px);
     }
   }
@@ -237,21 +235,26 @@
 @media (max-width: 1024px) {
   .modal-container {
     .inner-modal-container {
-      width: 100vw;
-      min-height:100%;
+
+      .project-img-text-container{
+              overflow-y: auto;
       @include dFlex($fflow: column nowrap, $g: 2rem);
       padding: clamp(1rem, 3vw, 3rem);
 
       .project-text {
         max-width: 100%;
+        width: 100%;
         margin-bottom: 4rem;
         order: 2;
       }
 
       .project-img-container {
-               
+        max-width: 100%;
+        height: auto;
         order: 1;
       }
+      }
+
     }
   }
 
@@ -275,14 +278,17 @@
     .preview-img-container {
       display: none;
     }
+
     .title-container {
       width: 100%;
-              flex-direction: column;
-        align-items: flex-start;
-        justify-content: center;
-        gap: 1rem;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 1rem;
+
       &:hover {
         background: transparent;
+
         img {
           opacity: 0;
           animation: none;
@@ -290,12 +296,44 @@
       }
     }
   }
+
+  .modal-container {
+    .inner-modal-container {
+      .close-icon-wrapper {
+        background-color: #1f1f1f;
+      }
+    }
+  }
 }
 
+@media (max-height: 500px) {
+  .inner-modal-container {
+    max-height: 95vh;
+    max-width: 95vw;
+    height: 95vh;
+    width: 95vw;
+    padding: 0.5rem;
+  }
 
-@media (max-width: 500px){
-      .title-container{
-        div{
-          font-size: 1rem;
-        display: flex;}
-}}
+  .project-text {
+    gap: 0.5rem;
+
+    .link-btns {
+      gap: 0.5rem;
+    }
+  }
+
+  .headlines h2 {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+
+  .headlines h3 {
+    font-size: 1.2rem;
+  }
+
+  .close-icon-wrapper {
+    background-color: hsla(0, 0%, 12%, 1);
+  }
+
+}
