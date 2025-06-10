@@ -82,6 +82,12 @@
   }
 }
 
+@media(max-width: 912px){
+  .section-wrapper{
+    min-height: fit-content;
+  }
+}
+
 @media (max-width: 900px) {
   .section-wrapper {
     @include dFlex($fflow: column wrap, $jc: space-between, $ai: center, $g:4rem);
@@ -90,7 +96,8 @@
     margin: 0;
 
 .section-one,.section-two {
-      width: 90%;
+     max-width: 100%;
+     width: fit-content;
     }
   }
 }

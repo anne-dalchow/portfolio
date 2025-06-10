@@ -6,11 +6,17 @@
   gap: $g;
 }
 
-.section-wrapper{
-  @include dFlex($fflow: column wrap,$jc:flex-start, $ai:flex-start);
-    min-height: 80dvh;
-  .info-card,.singleproject{
-   width: 100%;
+.section-wrapper {
+  @include dFlex($fflow: column wrap, $jc:flex-start, $ai:flex-start);
+    height: fit-content;
+
+  .first-item {
+    margin-bottom: 2rem;
+  }
+
+  .info-card,
+  .singleproject {
+    width: 100%;
   }
 }
 
@@ -18,16 +24,13 @@
   .section-wrapper {
     @include dFlex($fflow: column wrap, $jc: space-between, $ai: center, $g: 0rem);
     align-content: center;
-    max-width: 100vw;
+    max-width: 100%;
+    width: auto;
     margin: 0;
 
-    .first-item {
-      margin-bottom: 2rem;
-    }
-
-    .section-one,
-    .section-two {
-      width: 90%;
+.section-one,.section-two {
+     max-width: 100%;
+     width: fit-content;
     }
   }
 }

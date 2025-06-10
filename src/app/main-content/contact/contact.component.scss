@@ -9,7 +9,7 @@
 }
 
 .section-wrapper{
-  min-height: 80dvh;
+  min-height: fit-content;
   @include dFlex($jc: space-between, $ai: flex-start);
 
   .section-one, .section-two{
@@ -22,11 +22,11 @@
   .section-wrapper {
     @include dFlex($fflow: column wrap, $jc: space-between, $ai: center, $g:4rem);
     align-content: center;
-    max-width: 100vw;
     margin: 0;
 
 .section-one,.section-two {
-      width: 90%;
+     max-width: 100%;
+     width: fit-content;
     }
   }
 }

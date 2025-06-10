@@ -21,7 +21,7 @@
 
 .section-wrapper {
   @include dFlex($jc: space-between, $ai: center);
-    min-height: 80dvh;
+    height: fit-content;
 
   .section-one, .section-two {
     width: 45%;
@@ -52,7 +52,7 @@
     margin: 0;
 
 .section-one,.section-two {
-      width: 90%;
+      width: 100%;
     }
   }
 }
@@ -62,5 +62,6 @@
     flex-flow: column wrap;
     align-content: center;
     gap: 8rem;
+
   }
 }
