@@ -3,7 +3,7 @@
   <div class="title-container">
     <div>
       <h3>{{ 'projects.' + project.key + '.name' | translate }}</h3>
-      <img class="hover-arrow-up" src="/images/arrows/arrow_forward_white.svg" height="20px" width="20px"
+      <img class="hover-arrow-up" src="images/arrows/arrow_forward_white.svg" height="20px" width="20px"
         alt="white arrow" />
     </div>
 
@@ -15,7 +15,7 @@
   </div>
 
   <div class="preview-img-container">
-    <img class="img-bg-hover" src="/images/projects/preview-hover.svg" alt="">
+    <img class="img-bg-hover" src="images/projects/preview-hover.svg" alt="">
     <img [src]="project.previewImg"
       [alt]="'Project preview image for ' + ('projects.' + project.key + '.name' | translate)">
   </div>
@@ -61,7 +61,7 @@
     </div>
     <button id="nextProject" (click)="showNextProject($event)">
       {{ 'project.next' | translate }}
-      <img src="/images/arrows/arrow_forward_hover.svg" alt="arrow shows forward"></button>
+      <img src="images/arrows/arrow_forward_hover.svg" alt="arrow shows forward"></button>
   </div>
 
 </section>

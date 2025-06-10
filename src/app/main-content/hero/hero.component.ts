@@ -4,6 +4,7 @@ import { HoverDotComponent } from '../../../shared/components/hover-dot/hover-do
 import { SlideButtonComponent } from '../../../shared/components/slide-button/slide-button.component';
 import { MarqueeComponent } from '../../../shared/components/marquee/marquee.component';
 
+
 @Component({
   selector: 'app-hero',
   standalone: true,

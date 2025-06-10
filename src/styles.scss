@@ -1,0 +1,255 @@
+// =========== FONT FIRA CODE ===========
+
+/* fira-code-300 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/fira-code/fira-code-v26-latin-300.woff2') format('woff2');
+}
+
+/* fira-code-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/fira-code/fira-code-v26-latin-regular.woff2') format('woff2');
+}
+
+/* fira-code-500 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/fira-code/fira-code-v26-latin-500.woff2') format('woff2');
+}
+
+/* fira-code-600 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/fira-code/fira-code-v26-latin-600.woff2') format('woff2');
+}
+
+/* fira-code-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/fira-code/fira-code-v26-latin-700.woff2') format('woff2');
+}
+
+
+// =========== FONT KARLA ===========
+
+/* karla-300 - latin */
+@font-face {
+  font-display: swap;
+    font-family: 'Karla';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/karla/karla-v31-latin-300.woff2') format('woff2');
+}
+
+/* karla-regular - latin */
+@font-face {
+  font-display: swap;
+    font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/karla/karla-v31-latin-regular.woff2') format('woff2');
+}
+
+/* karla-500 - latin */
+@font-face {
+  font-display: swap;
+    font-family: 'Karla';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/karla/karla-v31-latin-500.woff2') format('woff2');
+}
+
+/* karla-600 - latin */
+@font-face {
+  font-display: swap;
+    font-family: 'Karla';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/karla/karla-v31-latin-600.woff2') format('woff2');
+}
+
+/* karla-700 - latin */
+@font-face {
+  font-display: swap;
+    font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../public/fonts/karla/karla-v31-latin-700.woff2') format('woff2');
+}
+
+@mixin dFlex($fflow: row wrap, $jc: center, $ai: center, $g: 0px) {
+  display: flex;
+  flex-flow: $fflow;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $g;
+}
+
+@mixin dFlexShort($fflow: row wrap, $g: 0px) {
+  display: flex;
+  flex-flow: $fflow;
+  gap: $g;
+}
+
+
+// =========== GLOBAL STYLES ===========
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1.4;
+  font-size: 18px;
+  cursor: default;
+  scroll-behavior: smooth;
+  --accent-color: rgb(60, 207, 182);
+  --background-color: rgb(28, 28, 28);
+}
+
+html {
+  font-size: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+.section-wrapper {
+  max-width: 1300px;
+  padding: 2rem;
+  margin: 0 auto;
+  @include dFlex($jc: space-between, $ai: center);
+
+  .section-one,
+  .section-two {
+    width: 45%;
+  }
+}
+
+.header {
+  font-family: 'Fira Code', monospace;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+body {
+  background-color: var(--background-color);
+  color: rgba(217, 217, 217, 1);
+  height: 100%;
+  width: 100%;
+    font-family: 'Karla', sans-serif;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+h1 {
+    font-family: 'Karla', sans-serif;
+  font-size: clamp(5rem, 8vw, 7.1rem);
+  font-weight: 700;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Fira Code', monospace;
+  font-weight: 700;
+  font-size: 3.75rem;
+  color: var(--accent-color);
+}
+
+p {
+    font-family: 'Karla', sans-serif;;
+  font-size: 18px;
+  line-height: 120%;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(217, 217, 217, 1);
+  cursor: pointer;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.accent-color {
+  color: var(--accent-color);
+}
+
+.bold-accent-color {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+.warning {
+  color: rgba(236, 123, 123, 0.8);
+    font-family: 'Karla', sans-serif;;
+}
+
+button {
+    font-family: 'Karla', sans-serif;;
+  cursor: pointer;
+}
+
+// ===== SCROLLBAR =====
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00a896;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #028a76;
+}
+
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #00a896 #1a1a1a;
+}
+
+
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h1{
+    font-size: 4rem;
+  }
+  p{
+    font-size: 1.1rem;
+  }
+}

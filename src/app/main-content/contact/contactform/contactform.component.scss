@@ -40,7 +40,7 @@
       gap: 8px;
 
       p{
-        font-family: 'Karla';
+          font-family: 'Karla', sans-serif;
         font-size: 15px;
 
         .accent-color {
@@ -63,7 +63,7 @@
 
   input::placeholder,
   textarea::placeholder {
-    font-family: 'Karla';
+      font-family: 'Karla', sans-serif;
     font-size: 1rem;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.8);
@@ -79,7 +79,7 @@
   textarea {
     background: transparent;
     border: none;
-    font-family: 'Karla';
+    font-family: 'Karla', sans-serif;
     font-size: 1rem;
     font-weight: 400;
     color: whitesmoke;
