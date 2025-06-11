@@ -82,10 +82,12 @@
   bottom: 0;
   mix-blend-mode: normal;
 
-  >p {
-    cursor: pointer;
-    margin-bottom: 5rem;
+  .mailadress-link {
+    p{
+      cursor: pointer;
+          margin-bottom: 5rem;
     transform: rotate(90deg);
+    }
 
     &:hover {
       color: var(--accent-color);

@@ -1,19 +1,19 @@
 <section class="testimonial-container">
   <h3><span class="bold-accent-color">{{ 'testimonial.title' | translate }}</span></h3>
-  <img class="quotes" src="/images/highlights/quotes.svg" alt="">
+  <img class="quotes" src="images/highlights/quotes.svg" alt="">
 
   <div class="slider-wrapper">
     <div class="slider" (touchstart)="onTouchStart($event)" (touchend)="onTouchEnd($event)">
       @for (testimonial of testimonials; track $index) {
 
       <app-single-testimonial [testimonial]="testimonial" class="slide" [ngClass]="{
-          'second-prev-slide': $index === (currentSlide - 2 + testimonials.length) % testimonials.length,
-          'prev-slide': $index === (currentSlide - 1 + testimonials.length) % testimonials.length,
-          'active-slide': $index === currentSlide,
-          'next-slide': $index === (currentSlide + 1) % testimonials.length,
-          'second-next-slide': $index === (currentSlide + 2) % testimonials.length,
-          'hidden-slide': $index === (currentSlide + 3) % testimonials.length
-        }">
+  'slide-far-left': $index === (currentSlide - 2 + testimonials.length) % testimonials.length,
+  'slide-left': $index === (currentSlide - 1 + testimonials.length) % testimonials.length,
+  'slide-center': $index === currentSlide,
+  'slide-right': $index === (currentSlide + 1) % testimonials.length,
+  'slide-far-right': $index === (currentSlide + 2) % testimonials.length,
+  'slide-out-of-view': $index === (currentSlide + 3) % testimonials.length
+}">
       </app-single-testimonial>
       }
     </div>

@@ -19,8 +19,8 @@ header {
   }
 
   #nav-icon {
-    width: 50px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     position: relative;
     margin: 0; 
     transform: rotate(0deg);
@@ -46,11 +46,11 @@ header {
     }
 
     span:nth-child(2) {
-      top: 18px;
+      top: 12px;
     }
 
     span:nth-child(3) {
-      top: 36px;
+      top: 24px;
     }
 
     &.open span:nth-child(1) {
@@ -101,11 +101,15 @@ background: linear-gradient(180deg, rgba(18, 63, 57, 1) 0%, rgba(13, 43, 39, 1) 
       visibility: visible;
       pointer-events: auto;
       transform: translateY(0);
+      display: flex;
+      flex-flow: column wrap;
+      align-content: center;
     }
 
     nav {
       display: flex;
       flex-direction: column;
+      align-items: center;
       gap: 1.6rem;
     }
 

@@ -236,23 +236,23 @@
   .modal-container {
     .inner-modal-container {
 
-      .project-img-text-container{
-              overflow-y: auto;
-      @include dFlex($fflow: column nowrap, $g: 2rem);
-      padding: clamp(1rem, 3vw, 3rem);
+      .project-img-text-container {
+        overflow-y: auto;
+        @include dFlex($fflow: column nowrap, $g: 2rem);
+        padding: clamp(1rem, 3vw, 3rem);
 
-      .project-text {
-        max-width: 100%;
-        width: 100%;
-        margin-bottom: 4rem;
-        order: 2;
-      }
+        .project-text {
+          max-width: 100%;
+          width: 100%;
+          margin-bottom: 4rem;
+          order: 2;
+        }
 
-      .project-img-container {
-        max-width: 100%;
-        height: auto;
-        order: 1;
-      }
+        .project-img-container {
+          max-width: 100%;
+          height: auto;
+          order: 1;
+        }
       }
 
     }
@@ -307,12 +307,10 @@
 }
 
 @media (max-height: 500px) {
-  .inner-modal-container {
-    max-height: 95vh;
-    max-width: 95vw;
-    height: 95vh;
-    width: 95vw;
-    padding: 0.5rem;
+  .modal-container .inner-modal-container {
+    height: 100vh;
+    width: 100vw;
+    padding: 1rem;
   }
 
   .project-text {
@@ -335,5 +333,33 @@
   .close-icon-wrapper {
     background-color: hsla(0, 0%, 12%, 1);
   }
+}
 
+@media (max-width: 500px) {
+  .modal-container .inner-modal-container {
+    height: 100vh;
+    width: 100vw;
+    padding: 1rem;
+  }
+
+  .project-text {
+    gap: 0.5rem;
+
+    .link-btns {
+      gap: 0.5rem;
+    }
+  }
+
+  .headlines h2 {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+
+  .headlines h3 {
+    font-size: 1.2rem;
+  }
+
+  .close-icon-wrapper {
+    background-color: hsla(0, 0%, 12%, 1);
+  }
 }
