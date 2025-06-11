@@ -32,12 +32,25 @@
 
     <div class="submit-container">
       <div>
-        <input type="checkbox" id="checkbox" required>
-        <p>
-          {{ 'contactForm.privacyTextBeforeLink' | translate }}
-          <a routerLink="/privacypolice" class="accent-color">{{ 'contactForm.privacyLinkText' | translate }}</a>
-          {{ 'contactForm.privacyTextAfterLink' | translate }}
-        </p>
+        <div>
+          <label class="container">
+            <p>
+              {{ 'contactForm.privacyTextBeforeLink' | translate }}
+              <a routerLink="/privacypolice" class="accent-color">{{ 'contactForm.privacyLinkText' | translate }}</a>
+              {{ 'contactForm.privacyTextAfterLink' | translate }}
+            </p>
+            <input type="checkbox" id="checkbox" required #checkbox (change)="onPrivacyCheckboxChange()">
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        @if(showPrivacyWarning){
+        <span class="warning"> {{ 'contactForm.warnings.privacyRequired' | translate }}</span>
+        }
+        @if(submissionMessage) {
+        <span class="success" [class.success-message]="isSuccess" [class.error-message]="!isSuccess">
+          {{ submissionMessage }}
+        </span>
+        }
       </div>
 
       <app-slide-button text="Say Hello :)" buttonType="submit"></app-slide-button>
