@@ -13,7 +13,7 @@ import {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, CursorGlowComponent, FooterComponent, TranslatePipe, TranslateDirective],
+  imports: [RouterOutlet, CommonModule, CursorGlowComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
