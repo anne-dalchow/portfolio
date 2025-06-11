@@ -23,7 +23,6 @@
     >div:first-child {
       border-top: 1px solid rgba(61, 207, 182, 0.5);
     }
-
   }
 
   .submit-container {
@@ -33,18 +32,23 @@
     align-items: center;
     gap: 3rem;
 
-
     div {
       display: flex;
-      flex-flow: row nowrap;
+      flex-flow: column nowrap;
       gap: 8px;
 
-      p{
-          font-family: 'Karla', sans-serif;
-        font-size: 15px;
+      div {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 8px;
 
-        .accent-color {
+        p {
+          font-family: 'Karla', sans-serif;
           font-size: 15px;
+
+          .accent-color {
+            font-size: 15px;
+          }
         }
       }
     }
@@ -63,7 +67,7 @@
 
   input::placeholder,
   textarea::placeholder {
-      font-family: 'Karla', sans-serif;
+    font-family: 'Karla', sans-serif;
     font-size: 1rem;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.8);
@@ -92,4 +96,72 @@
   width: 100%;
   height: 100px;
   resize: none;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+
+    &:checked~.checkmark:after {
+      display: block;
+    }
+  }
+
+  &:hover input~.checkmark {
+    background-color: rgba(60, 207, 183, 0.3);
+  }
+}
+
+.checkmark {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eeeeee00;
+  border: 1px solid var(--accent-color);
+
+  &:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  &:after {
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--accent-color);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+
+.warning, .error-message {
+  color: rgba(236, 123, 123, 0.8);
+    font-family: 'Karla', sans-serif;;
+    font-size: 1rem;
+}
+
+.success-message{
+  color: var(--accent-color);
 }
