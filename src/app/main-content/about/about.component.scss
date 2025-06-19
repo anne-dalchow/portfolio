@@ -14,10 +14,14 @@
 
 .section-wrapper {
   @include dFlex($jc: space-between, $ai: flex-end);
-    min-height: 100dvh;
+  min-height: 100dvh;
 
-  .section-one,.section-two{
-    width: 45%;
+  .section-one {
+    width: 35%;
+  }
+
+  .section-two {
+    width: 50%;
   }
 }
 
@@ -28,7 +32,6 @@
 
 
   .portrait-container {
-    aspect-ratio: 1 / 1; // Quadrat
     border-radius: 30px;
     overflow: hidden;
     position: relative;
@@ -41,7 +44,7 @@
     left: -30px;
     width: 100%;
     height: 100%;
-    aspect-ratio: 1 / 1;
+
     background: url('./../../../../public/images/about_me/avatar-hover-bg.png') center/cover no-repeat;
     border-radius: 30px;
     z-index: 1;
@@ -57,19 +60,19 @@
   .portrait-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     filter: grayscale(1);
     transition: filter 0.3s ease;
 
-    .active & {
-      filter: grayscale(0);
+    &:hover {
+      filter: grayscale(0.2);
     }
   }
 }
 
-.section-two{
+.section-two {
 
-  .intro{
+  .intro {
     margin-bottom: 2rem;
   }
 
@@ -82,8 +85,8 @@
   }
 }
 
-@media(max-width: 912px){
-  .section-wrapper{
+@media(max-width: 912px) {
+  .section-wrapper {
     min-height: fit-content;
   }
 }
@@ -95,16 +98,17 @@
     max-width: 100vw;
     margin: 0;
 
-.section-one,.section-two {
-     max-width: 100%;
-     width: fit-content;
+    .section-one,
+    .section-two {
+      max-width: 100%;
+      width: fit-content;
     }
   }
 }
 
 @media (max-width: 768px) {
   .section-wrapper {
-          @include dFlex( $g:8rem);
-        margin-top: 4rem;
+    @include dFlex($g:8rem);
+    margin-top: 4rem;
   }
 }
