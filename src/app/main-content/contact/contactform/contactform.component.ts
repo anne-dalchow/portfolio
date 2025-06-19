@@ -30,7 +30,7 @@ export class ContactformComponent {
     checkbox: false
   }
 
-  mailTest = true;
+  mailTest = false;
 
   post = {
     endPoint: 'https://anne-dalchow.de/sendMail.php',
