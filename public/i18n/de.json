@@ -61,6 +61,23 @@
         "Angular": "Angular",
         "TypeScript": "TypeScript"
       }
+    },
+      "pokemon": {
+      "name": "Pokemon - Pokédex & Game",
+      "description": "Durchstöbere einen digitalen Pokédex mit allen Infos zu deinen Lieblings-Pokémon und fordere Freunde im rundenbasierten Kartenspiel heraus. Mit animierter Spiel-Logik, API-Anbindung und dynamischer Benutzeroberfläche.",
+      "techStack": {
+        "CSS": "CSS",
+        "HTML": "HTML",
+        "JavaScript": "JavaScript"
+      }
+    },
+      "mindfull_app": {
+      "name": "Mindfull App - Prototyping",
+      "description": "Konzept und Prototyp einer Achtsamkeits- und Journaling-App. Gestaltet mit Fokus auf ruhige Farben, klare Nutzerführung und intuitive tägliche Reflexionen.",
+      "techStack": {
+        "Figma": "Figma",
+        "Adobe Illustrator": "Adobe Illustrator"
+      }
     }
   },
     "project": {
@@ -139,7 +156,7 @@
   "representedBy": "Anne Dalchow",
   "contactTitle": "Kontakt",
   "phone": "Telefon: 0177-3447973",
-  "email": "E-Mail: anne.dalchow@web.de",
+  "email": "E-Mail: contact@anne-dalchow.de",
   "contentResponsibilityTitle": "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV",
   "contentResponsibility": "Anne Dalchow\nKlemmstraße 8\n04277 Leipzig",
 
@@ -227,7 +244,7 @@
         "address1": "Klemmstraße 8",
         "address2": "04277 Leipzig",
         "phone": "Telefon: 01773447973",
-        "email": "E-Mail: anne.dalchow(at)web.de",
+        "email": "E-Mail: contact(at)anne-dalchow.de",
         "definition": "Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen, E-Mail-Adressen o. Ä.) entscheidet."
       },
       "storageDuration": {

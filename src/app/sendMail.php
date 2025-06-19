@@ -18,7 +18,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $name = $params->name;
             $message = $params->message;
     
-            $recipient = 'anne.dalchow@.de';  
+            $recipient = 'contact@anne-dalchow.de';  
             $subject = "Contact From <$email>";
             $message = "From:" . $name . "<br>" . $message ;
     
@@ -27,11 +27,12 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $headers[] = 'Content-type: text/html; charset=utf-8';
 
             // Additional headers
-            $headers[] = "From: noreply@mywebsite.com";
+            $headers[] = "From: contact@anne-dalchow.de";
 
             mail($recipient, $subject, $message, implode("\r\n", $headers));
             break;
         default: //Reject any non POST or OPTIONS requests.
             header("Allow: POST", true, 405);
-            exit;
+            echo json_encode(["success" => true, "message" => "Email sent"]);
+exit;
     } 
