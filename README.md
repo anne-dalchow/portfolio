@@ -1,59 +1,48 @@
-# Portfolio
+# Portfolio Projekt
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.12.
+## Projektübersicht
+Dieses Projekt ist mit Angular 19 (Standalone API) und TypeScript erstellt worden.
 
-## Development server
+## Technische Details
+- **Framework:** Angular 19 (Standalone)
+- **Sprache:** TypeScript
+- **Styling:** SCSS
+- **Internationalisierung:** ngx-translate, Übersetzungsdateien in `/public/i18n/`
+- **Routing:** Angular Router, Konfiguration in `app.routes.ts`
+- **Assets:** Bilder und Icons liegen in `/public/images/`
+- **HTTP:** Angular HttpClient für Übersetzungs-Loader
 
-To start a local development server, run:
+## Struktur
+- `src/app/` – Hauptanwendung und Komponenten
+- `src/shared/components/` – Wiederverwendbare Komponenten (z.B. Button, Language-Toggle)
+- `public/images/` – Projektbilder, Icons, Logos
+- `public/i18n/` – Übersetzungsdateien (de.json, en.json)
 
+## Besonderheiten
+- **Sprachumschaltung:** Die gewählte Sprache wird im LocalStorage gespeichert und beim Seitenwechsel beibehalten.
+- **Scroll-Verhalten:** Das Scrollen nach oben bei Navigation wird in der Root-Komponente manuell umgesetzt.
+- **Carousel:** Testimonials werden als endloses Carousel mit Animation angezeigt.
+
+## Starten des Projekts
+1. Abhängigkeiten installieren:
+   ```bash
+   npm install
+   ```
+2. Entwicklungsserver starten:
+   ```bash
+   npm start
+   ```
+3. Die App ist unter `http://localhost:4200` erreichbar.
+
+## Build für Produktion
 ```bash
-ng serve
+npm run build
 ```
+Das gebaute Projekt liegt im `dist/`-Ordner.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Weitere Hinweise
+- Für neue Übersetzungen einfach die JSON-Dateien in `/public/i18n/` erweitern.
+- Neue Projekte/Testimonials können in den jeweiligen Service-Dateien gepflegt werden.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+Fragen oder Probleme? Einfach im Code kommentieren oder Issues anlegen!
