@@ -53,7 +53,9 @@
         }
       </div>
 
-      <app-slide-button text="Say Hello :)" buttonType="submit"></app-slide-button>
-    </div>
-  </form>
-</div>
+      <div class="container">
+        <button type="submit" class="btn btn-two" [disabled]="!contactForm.form.valid || !checkbox.checked">
+          Say Hello
+          @if(contactForm.form.valid && checkbox.checked){<span> :)</span>}
+        </button>
+      </div>
