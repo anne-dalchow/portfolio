@@ -46,3 +46,58 @@ Das gebaute Projekt liegt im `dist/`-Ordner.
 
 ---
 Fragen oder Probleme? Einfach im Code kommentieren oder Issues anlegen!
+
+
+
+---
+
+
+
+# Portfolio Project
+
+## Project Overview
+This project was built with Angular 19 (Standalone API) and TypeScript.
+
+## Technical Details
+- **Framework:** Angular 19 (Standalone)
+- **Language:** TypeScript
+- **Styling:** SCSS
+- **Internationalization:** ngx-translate, translation files in `/public/i18n/`
+- **Routing:** Angular Router, configuration in `app.routes.ts`
+- **Assets:** Images and icons are located in `/public/images/`
+- **HTTP:** Angular HttpClient for translation loader
+
+## Structure
+- `src/app/` – Main application and components
+- `src/shared/components/` – Reusable components (e.g. Button, Language Toggle)
+- `public/images/` – Project images, icons, logos
+- `public/i18n/` – Translation files (de.json, en.json)
+
+## Special Features
+- **Language Switch:** The selected language is stored in LocalStorage and retained when navigating between pages.
+- **Scroll Behavior:** Scrolling to the top on navigation is handled manually in the root component.
+- **Carousel:** Testimonials are displayed as an endless carousel with animation.
+
+## Getting Started
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Start the development server:
+   ```bash
+   npm start
+   ```
+3. The app will be available at `http://localhost:4200`.
+
+## Production Build
+```bash
+npm run build
+```
+The built project will be in the `dist/` folder.
+
+## Additional Notes
+- To add new translations, simply extend the JSON files in `/public/i18n/`.
+- New projects/testimonials can be managed in the respective service files.
+
+---
+Questions or issues? Just comment in the code or create an issue!
