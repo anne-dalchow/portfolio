@@ -1,22 +1,23 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 import { SvgButtonComponent } from "../../../../../shared/components/svg-button/svg-button.component";
-import { CommonModule } from '@angular/common';
-import { TranslateDirective, TranslatePipe } from '@ngx-translate/core';
+import { CommonModule } from "@angular/common";
+import { TranslateDirective, TranslatePipe } from "@ngx-translate/core";
 
 @Component({
-  selector: 'app-singleproject',
+  selector: "app-singleproject",
   imports: [SvgButtonComponent, CommonModule, TranslatePipe],
-  templateUrl: './singleproject.component.html',
-  styleUrl: './singleproject.component.scss'
+  templateUrl: "./singleproject.component.html",
+  styleUrl: "./singleproject.component.scss",
 })
 export class SingleprojectComponent {
-
   @Input() project!: {
     key: string;
     index: number;
-    techStack: { name: string; img: string; }[];
+    techStack: { name: string; img: string }[];
     previewImg: string;
     img: string;
+    githubUrl: string;
+    liveUrl: string;
   };
 
   @Input() isModalVisible: boolean = false;
