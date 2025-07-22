@@ -51,10 +51,10 @@ Das gebaute Projekt liegt im `dist/`-Ordner.
 Fragen oder Probleme? Einfach im Code kommentieren oder Issues anlegen!
 
 
-
 ---
-
-
+---
+<br>
+<br>
 
 # Portfolio Project
 
