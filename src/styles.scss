@@ -37,7 +37,7 @@
     font-family: 'Karla';
   font-style: normal;
   font-weight: 300;
-  src: url('assets/karla/Karla-Regular.ttf') format('truetype');
+  src: url('assets/karla/Karla-Light.ttf') format('truetype');
 }
 
 /* karla-regular - latin */
@@ -55,7 +55,7 @@
     font-family: 'Karla';
   font-style: normal;
   font-weight: 700;
-  src: url('assets/karla/Karla-Regular.ttf') format('truetype');
+  src: url('assets/karla/Karla-Bold.ttf') format('truetype');
 }
 
 @mixin dFlex($fflow: row wrap, $jc: center, $ai: center, $g: 0px) {
