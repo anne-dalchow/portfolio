@@ -63,7 +63,7 @@
       }
     },
       "pokemon": {
-      "name": "Pokemon - Pokédex & Game",
+      "name": "Pokédex & Game",
       "description": "Durchstöbere einen digitalen Pokédex mit allen Infos zu deinen Lieblings-Pokémon und fordere Freunde im rundenbasierten Kartenspiel heraus. Mit animierter Spiel-Logik, API-Anbindung und dynamischer Benutzeroberfläche.",
       "techStack": {
         "CSS": "CSS",
@@ -87,20 +87,20 @@
 "testimonial": {
   "title": "Was meine Teamkollegen sagen",
 "t1": {
-  "description": "1: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-  "jobname": "Frontend-Entwickler"
+  "description": "Ich schätze die Zusammenarbeit und den Austausch mit Anne wirklich sehr, weil man von ihr sehr viel lernen kann.Außerdem zeichnet sie sich durch ihre empathische und wertschätzende Art als tolle Teamplayerin aus. Sie ist pfiffig und arbeitet sich mit großer Gründlichkeit in jedes Thema ein. Ihre Projekte setzt sie mit einem ausgeprägten Blick fürs Detail um und man kann sagen, dass sie mittlerweile nicht mehr nur eine klasse Designerin ist, sondern auch eine starke Entwicklerin!",
+  "jobname": "Frontend-Entwicklerin"
 },
 "t2": {
-  "description": "2: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-  "jobname": "UX-Designerin"
+  "description": "Anne war eine echte Bereicherung für unsere Gruppe. Nicht nur, weil sie super strukturiert und professionell gearbeitet hat, sondern vor allem, weil sie ihr Wissen so verständlich und offen geteilt hat. Gerade durch sie konnte ich in den letzten Wochen richtig viel dazulernen. Ich bin dankbar, dass ich diese Erfahrung mit ihr machen durfte!",
+  "jobname": "Frontend-Entwickler"
 },
 "t3": {
   "description": "3: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
   "jobname": "Frontend-Entwickler"
 },
 "t4": {
-  "description": "4: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-  "jobname": "UX-Designerin"
+  "description": "Anne überzeugte mich durch fundiertes technisches Wissen und einen klaren Blick für sauberen Code sowie effiziente Lösungen. Dabei ist sie stets hilfsbereit und eine verlässliche Ansprechpartnerin bei fachlichen Fragen und Herausforderungen. Ihre ruhige, kompetente Art macht die Zusammenarbeit besonders wertvoll und somit ist sie für mich auch in zukünftigen Projekten eine absolute Wunsch-Teampartnerin.",
+  "jobname": "Frontend-Entwickler"
 },
 "t5": {
   "description": "5: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
