@@ -3,7 +3,7 @@ import { HttpClient } from "@angular/common/http";
 import { Component, ElementRef, inject, ViewChild } from "@angular/core";
 import { FormsModule, NgForm } from "@angular/forms";
 import { RouterLink } from "@angular/router";
-import { TranslatePipe } from "@ngx-translate/core";
+import { TranslatePipe, TranslateService } from "@ngx-translate/core";
 
 @Component({
   selector: "app-contactform",
@@ -13,6 +13,7 @@ import { TranslatePipe } from "@ngx-translate/core";
 })
 export class ContactformComponent {
   http = inject(HttpClient);
+  translate = inject(TranslateService);
 
   @ViewChild("checkbox") checkboxRef!: ElementRef<HTMLInputElement>;
 
@@ -45,41 +46,32 @@ export class ContactformComponent {
     this.isSuccess = null;
 
     const isPrivacyCheckboxChecked = this.checkboxRef.nativeElement.checked;
+
     if (!isPrivacyCheckboxChecked) {
       this.showPrivacyWarning = true;
       return;
     } else {
       this.showPrivacyWarning = false;
     }
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+
+    if (ngForm.submitted && ngForm.form.valid) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData)).subscribe({
         next: (response) => {
           ngForm.resetForm();
           this.checkboxRef.nativeElement.checked = false;
           this.contactData.checkbox = false;
-          this.submissionMessage = "Nachricht erfolgreich gesendet!";
+          this.submissionMessage = this.translate.instant("contactForm.messages.success");
           this.isSuccess = true;
-          console.log("Nachricht erfolgreich gesendet!", response);
+          setTimeout(() => {
+            this.submissionMessage = "";
+          }, 2500);
         },
         error: (error) => {
-          this.submissionMessage =
-            "Fehler beim Senden der Nachricht. Bitte versuchen Sie es später erneut.";
+          this.submissionMessage = this.translate.instant("contactForm.messages.error");
           this.isSuccess = false;
-          console.error("Fehler beim Senden der Nachricht:", error);
         },
         complete: () => console.info("send post complete"),
       });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      ngForm.resetForm();
-      this.checkboxRef.nativeElement.checked = false;
-      this.contactData.checkbox = false;
-
-      this.submissionMessage =
-        "Formular im Testmodus erfolgreich zurückgesetzt. Nachricht gesendet";
-      this.isSuccess = true;
-      console.log("Formular im Testmodus zurückgesetzt. Nachricht gesendet");
-    } else {
-      console.log("Formular nicht gültig oder nicht abgeschickt.");
     }
   }
 
