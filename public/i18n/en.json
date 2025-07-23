@@ -28,12 +28,12 @@
   "portfolio": {
     "subtitle": "Portfolio",
     "title": "Featured Projects",
-    "intro": "Explore a selection of my work here - <br />Interact with projects to see my skills in action."
+    "intro": "Explore a selection of my work here – <br />Interact with projects to see my skills in action."
   },
   "projects": {
     "join": {
       "name": "Join",
-      "description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+      "description": "Task manager inspired by the Kanban system. Create and organize tasks with drag-and-drop features, assign users and categories.",
       "techStack": {
         "CSS": "CSS",
         "HTML": "HTML",
@@ -44,7 +44,7 @@
     },
     "el_pollo_loco": {
       "name": "El Pollo Loco",
-      "description": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.",
+      "description": "Jump, run and throw game based on an object-oriented approach. Help Pepe collect coins and tabasco salsa to fight the crazy hen.",
       "techStack": {
         "CSS": "CSS",
         "HTML": "HTML",
@@ -53,12 +53,29 @@
     },
     "da_bubble": {
       "name": "DA Bubble",
-      "description": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.",
+      "description": "This app is a Slack clone. It revolutionizes team communication with an intuitive interface, real-time messaging, and robust channel organization.",
       "techStack": {
         "CSS": "CSS",
         "HTML": "HTML",
         "Angular": "Angular",
         "TypeScript": "TypeScript"
+      }
+    },
+    "pokemon": {
+      "name": "Pokédex & Game",
+      "description": "Browse a digital Pokédex with all info about your favorite Pokémon and challenge friends in a turn-based card game. Features animated game logic, API integration, and a dynamic user interface.",
+      "techStack": {
+        "CSS": "CSS",
+        "HTML": "HTML",
+        "JavaScript": "JavaScript"
+      }
+    },
+    "mindfull_app": {
+      "name": "Mindfull App – Prototyping",
+      "description": "Concept and prototype of a mindfulness and journaling app. Designed with calm colors, clear user guidance, and intuitive daily reflections.",
+      "techStack": {
+        "Figma": "Figma",
+        "Adobe Illustrator": "Adobe Illustrator"
       }
     }
   },
@@ -67,27 +84,27 @@
   "next": "Next Project"
 },
 "testimonial": {
-  "title": "What my colleagues say about me",
-"t1": {
-  "description": "1: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-  "jobname": "Frontend Developer"
-},
-"t2": {
-  "description": "2: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-  "jobname": "UX-Design"
-},
-"t3": {
-  "description": "3: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-  "jobname": "Frontend Developer"
-},
-"t4": {
-  "description": "4: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-  "jobname": "UX-Design"
-},
-"t5": {
-  "description": "5: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-  "jobname": "Frontend Developer"
-}
+  "title": "What my colleagues say",
+  "t1": {
+    "description": "I really appreciate working and exchanging ideas with Anne, because you can learn a lot from her. She is also a great team player thanks to her empathetic and appreciative manner. She is clever and approaches every topic with great thoroughness. She implements her projects with a keen eye for detail, and you can say that she is now not only a great designer, but also a strong developer!",
+    "jobname": "Frontend Developer"
+  },
+  "t2": {
+    "description": "Anne was a real asset to our group. Not only because she worked in a super structured and professional way, but above all because she shared her knowledge so openly and understandably. Thanks to her, I was able to learn a lot in the last few weeks. I am grateful to have had this experience with her!",
+    "jobname": "Frontend Developer"
+  },
+  "t3": {
+    "description": "3: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
+    "jobname": "Frontend Developer"
+  },
+  "t4": {
+    "description": "Anne impressed me with her solid technical knowledge and a clear eye for clean code and efficient solutions. She is always helpful and a reliable contact for technical questions and challenges. Her calm, competent manner makes working together particularly valuable, and she is my absolute dream team partner for future projects.",
+    "jobname": "Frontend Developer"
+  },
+  "t5": {
+    "description": "5: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
+    "jobname": "Frontend Developer"
+  }
 },
 "contactSection": {
   "subtitle": "Contact me",
