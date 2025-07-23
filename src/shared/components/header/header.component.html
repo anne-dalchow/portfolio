@@ -1,29 +1,28 @@
-<header class="header" role="banner">
-  <img src="images/logo/ad_logo_full.png" alt="Logo Anne Dalchow" routerLink="/" />
-
-  <div id="nav-icon" (click)="toggleMenu()" [class.open]="isOpen" aria-label="Toggle Navigation"
-    [attr.aria-expanded]="isOpen">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-
-  <div class="nav-container" [class.open]="isOpen">
-    <nav role="navigation" aria-label="Main Navigation">
-      <a href="#about-me">
-        <app-hover-dot dotPosition="below" color="var(--accent-color)">{{ 'nav.aboutMe' | translate }}</app-hover-dot>
-      </a>
-      <a href="#skills">
-        <app-hover-dot dotPosition="below" color="var(--accent-color)">Skills</app-hover-dot>
-      </a>
-      <a href="#portfolio">
-        <app-hover-dot dotPosition="below" color="var(--accent-color)">Portfolio</app-hover-dot>
-      </a>
-    </nav>
-
-    <div class="languageToggle">
-      <app-toggle-language>
-      </app-toggle-language>
+<header class="header-container" role="banner">
+  <div class="header-wrapper">
+    <img src="images/logo/ad_logo_full.png" alt="Logo Anne Dalchow" routerLink="/" />
+    <div id="nav-icon" (click)="toggleMenu()" [class.open]="isOpen" aria-label="Toggle Navigation"
+      [attr.aria-expanded]="isOpen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-container" [class.open]="isOpen">
+      <nav role="navigation" aria-label="Main Navigation">
+        <a href="#about-me">
+          <app-hover-dot dotPosition="below" color="var(--accent-color)">{{ 'nav.aboutMe' | translate }}</app-hover-dot>
+        </a>
+        <a href="#skills">
+          <app-hover-dot dotPosition="below" color="var(--accent-color)">Skills</app-hover-dot>
+        </a>
+        <a href="#portfolio">
+          <app-hover-dot dotPosition="below" color="var(--accent-color)">Portfolio</app-hover-dot>
+        </a>
+      </nav>
+      <div class="languageToggle">
+        <app-toggle-language>
+        </app-toggle-language>
+      </div>
     </div>
   </div>
 </header>
