@@ -1,37 +1,36 @@
-import { Component, computed, inject, OnInit, signal } from '@angular/core';
+import { Component, computed, inject, OnInit, signal } from "@angular/core";
 import { SingleTestimonialComponent } from "./single-testimonial/single-testimonial.component";
-import { TestimonallistdataService, Testimonial } from '../../testimonallistdata.service';
-import { CommonModule } from '@angular/common';
-import { TranslatePipe } from '@ngx-translate/core';
+import { TestimonallistdataService, Testimonial } from "../../testimonallistdata.service";
+import { CommonModule } from "@angular/common";
+import { TranslatePipe } from "@ngx-translate/core";
 
 @Component({
-  selector: 'app-testimonial',
+  selector: "app-testimonial",
   standalone: true,
   imports: [SingleTestimonialComponent, CommonModule, TranslatePipe],
-  templateUrl: './testimonial.component.html',
-  styleUrl: './testimonial.component.scss'
+  templateUrl: "./testimonial.component.html",
+  styleUrl: "./testimonial.component.scss",
 })
-
 export class TestimonialComponent implements OnInit {
-
   testimonials: Testimonial[] = [];
+  currentSlide: number = 1;
 
-  constructor(private testimonialService: TestimonallistdataService) { }
+  private startX: number = 0;
+  private threshold: number = 50;
+
+  constructor(private testimonialService: TestimonallistdataService) {}
 
   ngOnInit(): void {
     this.testimonials = this.testimonialService.testimoniallist;
   }
-  currentSlide = 0;
-
-  private startX = 0;
-  private threshold = 50;
 
   nextSlide() {
     this.currentSlide = (this.currentSlide + 1) % this.testimonials.length;
   }
 
   prevSlide() {
-    this.currentSlide = (this.currentSlide - 1 + this.testimonials.length) % this.testimonials.length;
+    this.currentSlide =
+      (this.currentSlide - 1 + this.testimonials.length) % this.testimonials.length;
   }
 
   goToSlide(index: number) {
@@ -51,4 +50,3 @@ export class TestimonialComponent implements OnInit {
     }
   }
 }
-

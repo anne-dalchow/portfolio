@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from "@angular/core";
+import { Project } from "../../../../core/interfaces/project.interface";
 import { SvgButtonComponent } from "../../../../../shared/components/svg-button/svg-button.component";
 import { CommonModule } from "@angular/common";
 import { TranslateDirective, TranslatePipe } from "@ngx-translate/core";
@@ -10,23 +11,14 @@ import { TranslateDirective, TranslatePipe } from "@ngx-translate/core";
   styleUrl: "./singleproject.component.scss",
 })
 export class SingleprojectComponent {
-  @Input() project!: {
-    key: string;
-    index: number;
-    techStack: { name: string; img: string }[];
-    previewImg: string;
-    img: string;
-    githubUrl: string;
-    liveUrl: string;
-  };
-
+  @Input() project!: Project;
   @Input() isModalVisible: boolean = false;
 
   @Output() openModal = new EventEmitter<any>();
   @Output() closeModal = new EventEmitter<void>();
   @Output() nextProjectRequest = new EventEmitter<void>();
 
-  isAnimatingOut = false;
+  isAnimatingOut: boolean = false;
 
   onClick() {
     this.openModal.emit(this.project);

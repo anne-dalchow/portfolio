@@ -23,5 +23,5 @@ export class AppComponent {
     this.translate.setDefaultLang("de");
     this.translate.use("de");
   }
-  title = "portfolio";
+  title: string = "portfolio";
 }
