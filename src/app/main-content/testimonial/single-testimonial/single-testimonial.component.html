@@ -1,7 +1,7 @@
 <div class="testimonial-container">
-  {{ 'testimonial.' + testimonial.key + '.description' | translate }}
-  <div>
+  <p class="testimonial-text">{{ 'testimonial.' + testimonial.key + '.description' | translate }}</p>
+  <div class="testimonial-name-container">
     <div class="stroke"></div>
-    <p>{{ testimonial.name }} - {{ 'testimonial.' + testimonial.key + '.jobname' | translate }}</p>
+    <p>{{ testimonial.name }} - <br>{{ 'testimonial.' + testimonial.key + '.jobname' | translate }}</p>
   </div>
 </div>
