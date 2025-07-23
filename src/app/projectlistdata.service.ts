@@ -48,7 +48,7 @@ export class ProjectlistdataService {
     {
       key: "pokemon",
       index: 3,
-      name: "Pokémon – Pokédex & Game",
+      name: "Pokédex & Game",
       description:
         "Explore a digital Pokédex and challenge friends in a turn-based card game. Featuring dynamic UI, API integration, and animated game logic for an engaging experience.",
 
@@ -62,21 +62,5 @@ export class ProjectlistdataService {
       githubUrl: "https://github.com/anne-dalchow/pokemon-cardDuell-pokedex-main",
       liveUrl: "https://pokedex.anne-dalchow.de/",
     },
-    // {
-    //   key: "mindfull_app",
-    //   index: 4,
-    //   name: "Mindfull App - Prototyping",
-    //   description:
-    //     "Concept and prototype for a mindfulness and journaling app. Designed with a focus on calm colors, user guidance, and intuitive daily reflections.",
-
-    //   techStack: [
-    //     { name: "CSS", img: "images/projects/CSS.svg" },
-    //     { name: "HTML", img: "images/projects/HTML.svg" },
-    //   ],
-    //   previewImg: "images/projects/da_bubble_preview.svg",
-    //   img: "images/projects/slack_clone.jpg",
-    //   githubUrl: "https://github.com/dein-repo",
-    //   liveUrl: "https://dein-projekt-url.com",
-    // },
   ];
 }
