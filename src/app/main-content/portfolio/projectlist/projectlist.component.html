@@ -9,7 +9,7 @@
   </app-singleproject>
   }
 
-  @if (isModalVisible) {
+  @if (isModalVisible && selectedProject) {
   <app-singleproject [project]="selectedProject" [isModalVisible]="isModalVisible" (closeModal)="hideModal()"
     (nextProjectRequest)="loadNextProject()">
   </app-singleproject>
