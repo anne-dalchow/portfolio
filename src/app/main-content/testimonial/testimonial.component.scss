@@ -6,7 +6,6 @@ $gradient-mask: linear-gradient(to right,
   transparent);
 
 .testimonial-container {
-  position: relative;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -17,7 +16,19 @@ $gradient-mask: linear-gradient(to right,
   margin-bottom: 2rem;
   overflow: hidden;
 
-  h3{
+  .title-container {
+    position: relative;
+    max-width: 650px;
+    width: 57%;
+    min-width: 100px;
+
+    @media(max-width:735px) {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+
+  h3 {
     padding: 0 1rem;
     text-align: center;
   }
@@ -25,12 +36,23 @@ $gradient-mask: linear-gradient(to right,
   .quotes {
     position: absolute;
     z-index: 100;
-    top: 7vh;
-    right: auto;
-    left: 33vw;
-    width: 20vw;
+    top: 8vh;
+    left: 0;
+    width: clamp(5rem, 10vw, 10rem);
     max-width: 100px;
     height: auto;
+
+    @media(max-width: 735px) {
+      top: calc(6vh + 2rem);
+    }
+
+    @media(max-height: 800px) and (min-width: 736px) {
+      top: calc(5vh + 2rem);
+    }
+
+    @media(max-height: 850px) and (max-width: 375px) {
+      top: calc(10vh + 2rem);
+    }
   }
 }
 
@@ -54,44 +76,44 @@ $gradient-mask: linear-gradient(to right,
   -webkit-mask-image: $gradient-mask;
   mask-image: $gradient-mask;
 
-.slide {
-  position: absolute;
-  transition: transform $card-transition, opacity $card-transition;
+  .slide {
+    position: absolute;
+    transition: transform $card-transition, opacity $card-transition;
 
-  &.slide-center {
-    left: 50%;
-    transform: translate(-50%) scale(1.2);
-    opacity: 1;
-  }
+    &.slide-center {
+      left: 50%;
+      transform: translate(-50%) scale(1.2);
+      opacity: 1;
+    }
 
-  &.slide-left {
-    left: 50%;
-    transform: translate(-180%);
-    opacity: 0.75;
-  }
+    &.slide-left {
+      left: 50%;
+      transform: translate(-180%);
+      opacity: 0.75;
+    }
 
-  &.slide-right {
-    left: 50%;
-    transform: translate(80%);
-    opacity: 0.75;
-  }
+    &.slide-right {
+      left: 50%;
+      transform: translate(80%);
+      opacity: 0.75;
+    }
 
-  &.slide-far-left {
-    left: 50%;
-    transform: translate(-200%);
-    opacity: 0;
-  }
+    &.slide-far-left {
+      left: 50%;
+      transform: translate(-200%);
+      opacity: 0;
+    }
 
-  &.slide-far-right {
-    left: 50%;
-    transform: translate(200%);
-    opacity: 0;
-  }
+    &.slide-far-right {
+      left: 50%;
+      transform: translate(200%);
+      opacity: 0;
+    }
 
-  &.slide-out-of-view {
-    opacity: 0;
+    &.slide-out-of-view {
+      opacity: 0;
+    }
   }
-}
 }
 
 .navigation-container {
@@ -126,105 +148,5 @@ $gradient-mask: linear-gradient(to right,
     &:hover {
       background-color: var(--accent-color);
     }
-  }
-}
-
-@media (min-width:2000px) {
-  .testimonial-container .quotes {
-    left: 37vw;
-  }
-}
-
-@media (max-width: 1500px) {
-  :root {
-    --mask-edge: 15rem;
-  }
-  .testimonial-container .quotes {
-    left: 25vw;
-  }
-}
-
-@media (max-width: 1100px) and (max-height:1400px) {
-  :root {
-    --mask-edge: 15rem;
-  }
-    .testimonial-container .quotes {
-    top: 5vh;
-  }
-}
-
-@media (max-width: 1100px) and (max-height:800px) {
-  :root {
-    --mask-edge: 15rem;
-  }
-    .testimonial-container .quotes {
-    top: 10vh;
-  }
-}
-
-@media (max-width: 900px) {
-  :root {
-    --mask-edge: 15rem;
-  }
-    .testimonial-container .quotes {
-    top: 5vh;
-  }
-}
-
-@media (max-width: 780px) {
-  :root {
-    --mask-edge: 10rem;
-  }
-  .slide {
-    &.prev-slide {
-      transform: translate(-170%);
-    }
-    &.next-slide {
-      transform: translate(70%);
-    }
-  }
-}
-
-@media (max-width: 600px) {
-  :root {
-    --mask-edge: 5rem;
-  }
-  .testimonial-container .quotes {
-    top: 8vh;
-    left: 20vw;
-  }
-}
-
-@media (max-width: 500px) {
-  :root {
-    --mask-edge: 0rem;
-  }
-    .testimonial-container .quotes {
-      top: 7vh;
-    left: 5vh;
-  }
-}
-
-@media (max-width: 380px) {
-  :root {
-    --mask-edge: 0rem;
-  }
-  .testimonial-container .quotes {
-    top: 15vh;
-  }
-}
-
-@media (max-width: 350px) {
-  :root {
-    --mask-edge: 0rem;
-  }
-    .testimonial-container .quotes {
-    top: 12vh;
-  }
-}
-
-@media (max-height: 500px) {
-  .testimonial-container .quotes {
-    top: 15vh;
   }
 }

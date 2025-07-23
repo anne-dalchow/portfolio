@@ -63,7 +63,6 @@
   }
 
   .preview-img-container {
-
     .img-bg-hover {
       z-index: 0;
       opacity: 0;
@@ -218,6 +217,7 @@
   border: none;
   color: #3CCFB6;
   order: 3;
+  padding-right: 1rem;
 
   img {
     transition: all 1s ease;
@@ -235,7 +235,6 @@
 @media (max-width: 1024px) {
   .modal-container {
     .inner-modal-container {
-
       .project-img-text-container {
         overflow-y: auto;
         @include dFlex($fflow: column nowrap, $g: 2rem);
@@ -254,7 +253,6 @@
           order: 1;
         }
       }
-
     }
   }
 
@@ -335,7 +333,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .modal-container .inner-modal-container {
     height: 100vh;
     width: 100vw;

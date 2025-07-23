@@ -155,18 +155,44 @@
   }
 }
 
-
-.warning, .error-message {
+.warning,
+.error-message {
   color: rgba(236, 123, 123, 0.8);
-    font-family: 'Karla', sans-serif;;
-    font-size: 1rem;
+  font-family: 'Karla', sans-serif;
+  font-size: 1rem;
 }
 
-.success-message{
+.success-message {
   color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  opacity: 1;
+  transform: translateY(-20px);
+  animation: slide-in-out 2.5s ease;
 }
 
-.container{
+@keyframes slide-in-out {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+
+  10% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+
+  80% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+}
+
+.container {
   text-align: center;
   width: 100%;
   height: 33%;
@@ -186,7 +212,8 @@
   transition: all 0.3s;
 }
 
-.btn::before, .btn::after {
+.btn::before,
+.btn::after {
   content: '';
   position: absolute;
   transition: all 0.3s;
@@ -195,10 +222,10 @@
   width: 100%;
   height: 100%;
   z-index: 1;
-
 }
 
-.btn-two::before, .btn-two::after {
+.btn-two::before,
+.btn-two::after {
   content: '';
   position: absolute;
   width: 100%;
@@ -211,7 +238,8 @@
   cursor: pointer;
 }
 
-button[disabled], .btn-two:disabled {
+button[disabled],
+.btn-two:disabled {
   opacity: 0.5;
   cursor: not-allowed;
   pointer-events: none;
@@ -220,29 +248,39 @@ button[disabled], .btn-two:disabled {
 .btn-two:hover::after {
   animation-name: rotatecw;
   animation-duration: 3s;
-    border: 1px solid var(--accent-color);
-
+  border: 1px solid var(--accent-color);
 }
+
 .btn-two:hover::before {
-  animation-name: rotateccw; 
+  animation-name: rotateccw;
   animation-duration: 4s;
   border: 1px solid var(--accent-color);
-
 }
-.btn-two:hover::after, .btn-two:hover::before {
+
+.btn-two:hover::after,
+.btn-two:hover::before {
   left: 50px;
   width: 50px;
-  
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
 @keyframes rotatecw {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(360deg);}
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes rotateccw {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(-360deg);}
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
 }

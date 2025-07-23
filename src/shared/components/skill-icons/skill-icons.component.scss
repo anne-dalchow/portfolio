@@ -18,14 +18,12 @@
   max-width: 100%;
   height: auto;
   transition: transform 0.3s ease;
-  cursor: pointer;
 }
 
 .skill-icons img:hover {
   transform: scale(1.2);
 }
 
-/* Tooltip */
 .tooltip-container {
   position: relative;
 
@@ -74,8 +72,6 @@
   }
 
   figure {
-    cursor: pointer;
-
     figcaption {
       font-family: 'Fira Code', monospace;
     }

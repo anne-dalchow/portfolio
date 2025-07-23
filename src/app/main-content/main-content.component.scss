@@ -1,5 +1,10 @@
 div{
  display: flex;
  flex-flow: column wrap;
- gap: 3rem;
+ gap: 5rem;
+ position: relative;
+}
+
+.scroll-button{
+    position: absolute;
 }

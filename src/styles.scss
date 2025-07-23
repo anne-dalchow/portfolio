@@ -34,7 +34,7 @@
 /* karla-300 - latin */
 @font-face {
   font-display: swap;
-    font-family: 'Karla';
+  font-family: 'Karla';
   font-style: normal;
   font-weight: 300;
   src: url('assets/karla/Karla-Light.ttf') format('truetype');
@@ -43,7 +43,7 @@
 /* karla-regular - latin */
 @font-face {
   font-display: swap;
-    font-family: 'Karla';
+  font-family: 'Karla';
   font-style: normal;
   font-weight: 400;
   src: url('assets/karla/Karla-Regular.ttf') format('truetype');
@@ -52,7 +52,7 @@
 /* karla-700 - latin */
 @font-face {
   font-display: swap;
-    font-family: 'Karla';
+  font-family: 'Karla';
   font-style: normal;
   font-weight: 700;
   src: url('assets/karla/Karla-Bold.ttf') format('truetype');
@@ -88,7 +88,9 @@
 }
 
 
-html, body {  width: 100%;
+html,
+body {
+  width: 100%;
   overflow-x: hidden;
 }
 
@@ -99,7 +101,8 @@ html, body {  width: 100%;
 }
 
 .section-wrapper {
-  max-width: 1300px;
+  max-width: 1440px;
+  width: 100%;
   padding: 2rem;
   margin: 0 auto;
   @include dFlex($jc: space-between, $ai: center);
@@ -110,25 +113,19 @@ html, body {  width: 100%;
   }
 }
 
-.header {
-  font-family: 'Fira Code', monospace;
-  font-weight: 400;
-  font-size: 1.2rem;
-}
-
 body {
   background-color: var(--background-color);
   color: rgba(217, 217, 217, 1);
   height: 100%;
   width: 100%;
-    font-family: 'Karla', sans-serif;
+  font-family: 'Karla', sans-serif;
   display: flex;
   flex-flow: column wrap;
 }
 
 h1 {
-    font-family: 'Karla', sans-serif;
-  font-size: clamp(5rem, 8vw, 7.1rem);
+  font-family: 'Karla', sans-serif;
+  font-size: clamp(3rem, 5vw, 7.1rem);
   font-weight: 700;
   text-align: center;
 }
@@ -136,13 +133,14 @@ h1 {
 h2 {
   font-family: 'Fira Code', monospace;
   font-weight: 700;
-  font-size: 3.75rem;
+  font-size: clamp(2rem, 4vw, 3.75rem);
   color: var(--accent-color);
 }
 
 p {
-    font-family: 'Karla', sans-serif;;
-  font-size: 18px;
+  font-family: 'Karla', sans-serif;
+  ;
+  font-size: clamp(1rem, 2vw, 1.1rem);
   line-height: 120%;
 }
 
@@ -150,7 +148,7 @@ a {
   text-decoration: none;
   color: rgba(217, 217, 217, 1);
   cursor: pointer;
-  white-space:nowrap;
+  white-space: nowrap;
 }
 
 .bold {
@@ -168,7 +166,7 @@ a {
 }
 
 button {
-    font-family: 'Karla', sans-serif;;
+  font-family: 'Karla', sans-serif;
   cursor: pointer;
 }
 
@@ -198,7 +196,8 @@ button {
   scrollbar-color: #00a896 #1a1a1a;
 }
 
-.privacy-police, .imprint {
+.privacy-police,
+.imprint {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -218,7 +217,7 @@ button {
     font-size: clamp(2rem, 5vw, 2.5rem);
   }
 
-  section{
+  section {
     text-align: left;
 
     h2 {
@@ -241,9 +240,10 @@ button {
       color: var(--accent-color);
     }
 
-    p,li {
+    p,
+    li {
       font-size: 1rem;
-        white-space: pre-line;
+      white-space: pre-line;
     }
 
     a {
@@ -251,21 +251,5 @@ button {
       text-decoration: underline;
       font-size: clamp(1rem, 1.05rem + 0.5vw, 1.1rem);
     }
-  }
-}
-
-
-@media (max-width: 912px) {
-  h2 {
-    font-size: 3rem;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  h1{
-    font-size: 4rem;
-  }
-  p{
-    font-size: 1.1rem;
   }
 }

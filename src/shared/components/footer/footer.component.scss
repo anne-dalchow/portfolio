@@ -1,11 +1,12 @@
 footer {
-  max-width: 1300px;
+  max-width: 1440px;
   margin: 10vh auto 0 auto;
   padding: 1.7rem 2rem;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
+  gap:1rem;
 
   p,a{
     font-size: 1rem;
@@ -60,10 +61,18 @@ footer {
 
 }
 
-@media (max-width:768px) {
+@media (max-width:800px) {
+  footer{
+    gap: 2rem;
+  }
   .copyright {
     order: 3;
-    margin: 1.5rem auto;
+  }
+}
+
+@media(max-width: 602px){
+  .copyright{
+        margin: 1.5rem auto;
   }
 }
 
