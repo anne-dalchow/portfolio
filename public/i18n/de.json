@@ -5,11 +5,13 @@
   "checkWork": "Portfolio",
   "contactMe": "Schreibe mir"
  },
- "marquee":{
-  "based": "",
-  "openToWork": "",
-  "remoteWork": ""
- },  
+ "marquee": {
+   "remoteWork": "Offen für Remote-Arbeit",
+   "dot": "•",
+   "frontend": "Frontend-Entwicklerin",
+   "based": "Aus Leipzig",
+   "openToWork": "Offen für neue Projekte"
+ },
   "about": {
   "title": "Über mich",
   "subtitle": "Wer bin ich",
@@ -95,11 +97,11 @@
   "jobname": "Frontend-Entwickler"
 },
 "t3": {
-  "description": "3: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
+  "description": "Anne überzeugte mich durch fundiertes technisches Wissen und einen klaren Blick für sauberen Code sowie effiziente Lösungen. Dabei ist sie stets hilfsbereit und eine verlässliche Ansprechpartnerin bei fachlichen Fragen und Herausforderungen. Ihre ruhige, kompetente Art macht die Zusammenarbeit besonders wertvoll und somit ist sie für mich auch in zukünftigen Projekten eine absolute Wunsch-Teampartnerin.",
   "jobname": "Frontend-Entwickler"
 },
 "t4": {
-  "description": "Anne überzeugte mich durch fundiertes technisches Wissen und einen klaren Blick für sauberen Code sowie effiziente Lösungen. Dabei ist sie stets hilfsbereit und eine verlässliche Ansprechpartnerin bei fachlichen Fragen und Herausforderungen. Ihre ruhige, kompetente Art macht die Zusammenarbeit besonders wertvoll und somit ist sie für mich auch in zukünftigen Projekten eine absolute Wunsch-Teampartnerin.",
+  "description": "4: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
   "jobname": "Frontend-Entwickler"
 },
 "t5": {

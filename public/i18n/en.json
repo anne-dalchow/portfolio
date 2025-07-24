@@ -5,8 +5,12 @@
   "checkWork": "Check my work",
   "contactMe": "Contact me"
  },
- "marquee":{
-  
+ "marquee": {
+   "remoteWork": "Available for remote work",
+   "dot": "•",
+   "frontend": "Frontend Developer",
+   "based": "Based in Leipzig",
+   "openToWork": "Open to work"
  },
 "about": {
   "title": "About Me",
@@ -94,11 +98,11 @@
     "jobname": "Frontend Developer"
   },
   "t3": {
-    "description": "3: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
+    "description": "Anne impressed me with her solid technical knowledge and a clear eye for clean code and efficient solutions. She is always helpful and a reliable contact for technical questions and challenges. Her calm, competent manner makes working together particularly valuable, and she is my absolute dream team partner for future projects.",
     "jobname": "Frontend Developer"
   },
   "t4": {
-    "description": "Anne impressed me with her solid technical knowledge and a clear eye for clean code and efficient solutions. She is always helpful and a reliable contact for technical questions and challenges. Her calm, competent manner makes working together particularly valuable, and she is my absolute dream team partner for future projects.",
+    "description": "4: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
     "jobname": "Frontend Developer"
   },
   "t5": {

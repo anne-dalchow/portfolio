@@ -6,7 +6,6 @@
   transform: translateX(-50%) rotate(-3deg);
   bottom: 50px;
   z-index: 10;
-
   display: flex;
   overflow: hidden;
   user-select: none;
@@ -19,7 +18,7 @@
     transparent);
 }
 
-.marquee__content > * {
+.marquee-content > * {
   flex: 0 0 auto;
   color: var(--accent-color);
   margin: 2px;
@@ -37,7 +36,7 @@ li{
 
 }
 
-.marquee__content {
+.marquee-content {
   flex-shrink: 0;
   display: flex;
   justify-content: space-around;
