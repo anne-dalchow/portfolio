@@ -13,7 +13,7 @@ import { TranslatePipe } from "@ngx-translate/core";
 })
 export class TestimonialComponent implements OnInit {
   testimonials: Testimonial[] = [];
-  currentSlide: number = 1;
+  currentSlide: number = 0;
 
   private startX: number = 0;
   private threshold: number = 50;
