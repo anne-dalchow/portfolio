@@ -1,5 +1,4 @@
 <div id="bg-skills">
-
   <section class="section-wrapper">
     <app-info-card class="info-card section-one" subtitle="skills.subtitle" title="skills.title">
       <div class="description-wrapper">
@@ -8,10 +7,9 @@
           <p class="bold" [innerHTML]="'skills.question' | translate"></p>
           <p>{{ 'skills.invitation' | translate }}</p>
         </div>
-        <app-slide-button text="skills.button" btnHref="#contact"></app-slide-button>
+        <app-slide-button text="skills.button" (click)="setAnchorTo('contact')"></app-slide-button>
       </div>
     </app-info-card>
     <app-skill-icons class="skill-icons-container section-two"></app-skill-icons>
   </section>
-
 </div>

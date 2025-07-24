@@ -8,8 +8,8 @@
       <div>
         <h1>Anne Dalchow</h1>
         <div class="btns">
-          <app-slide-button text="hero.checkWork" btnHref="#portfolio"></app-slide-button>
-          <app-slide-button text="hero.contactMe" btnHref="#contact"></app-slide-button>
+          <app-slide-button text="hero.checkWork" (click)="setAnchorTo('portfolio')"></app-slide-button>
+          <app-slide-button text="hero.contactMe" (click)="setAnchorTo('contact')"></app-slide-button>
         </div>
       </div>
       <a href="#about-me" class="left-lateral">

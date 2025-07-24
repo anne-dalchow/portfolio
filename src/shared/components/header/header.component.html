@@ -9,13 +9,13 @@
     </div>
     <div class="nav-container" [class.open]="isOpen">
       <nav role="navigation" aria-label="Main Navigation">
-        <a href="#about-me">
+        <a (click)="setAnchorTo('aboutMe')">
           <app-hover-dot dotPosition="below" color="var(--accent-color)">{{ 'nav.aboutMe' | translate }}</app-hover-dot>
         </a>
-        <a href="#skills">
+        <a (click)="setAnchorTo('skills')">
           <app-hover-dot dotPosition="below" color="var(--accent-color)">Skills</app-hover-dot>
         </a>
-        <a href="#portfolio">
+        <a (click)="setAnchorTo('portfolio')">
           <app-hover-dot dotPosition="below" color="var(--accent-color)">Portfolio</app-hover-dot>
         </a>
       </nav>

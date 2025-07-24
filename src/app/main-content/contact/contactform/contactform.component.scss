@@ -1,3 +1,17 @@
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.floating-warning {
+  position: absolute;
+  left: 0;
+  top: 85%;
+  font-size: 0.95rem;
+  color: rgba(236, 123, 123, 0.9);
+  z-index: 2;
+  pointer-events: none;
+}
 .contactform-container {
   max-width: 620px;
   display: flex;
