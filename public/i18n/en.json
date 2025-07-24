@@ -93,6 +93,7 @@
     "description": "I really appreciate working and exchanging ideas with Anne, because you can learn a lot from her. She is also a great team player thanks to her empathetic and appreciative manner. She is clever and approaches every topic with great thoroughness. She implements her projects with a keen eye for detail, and you can say that she is now not only a great designer, but also a strong developer!",
     "jobname": "Frontend Developer"
   },
+
   "t2": {
     "description": "Anne was a real asset to our group. Not only because she worked in a super structured and professional way, but above all because she shared her knowledge so openly and understandably. Thanks to her, I was able to learn a lot in the last few weeks. I am grateful to have had this experience with her!",
     "jobname": "Frontend Developer"
@@ -101,14 +102,14 @@
     "description": "Anne impressed me with her solid technical knowledge and a clear eye for clean code and efficient solutions. She is always helpful and a reliable contact for technical questions and challenges. Her calm, competent manner makes working together particularly valuable, and she is my absolute dream team partner for future projects.",
     "jobname": "Frontend Developer"
   },
-  "t4": {
-    "description": "4: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-    "jobname": "Frontend Developer"
-  },
-  "t5": {
-    "description": "5: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.",
-    "jobname": "Frontend Developer"
-  }
+    "t4": {
+      "description": "I got to know Anne during a joint project. From the very beginning, she got involved and took on both organizational and leadership tasks. She also has the ability of logical thinking. Thanks to her expertise, she always came up with a solution to a problem. If she didn't know something, she researched until she acquired the necessary knowledge and internalized the process and procedures. She was a real asset to our team both professionally and personally, and I must say that I wouldn't have wanted to work with anyone else!",
+      "jobname": "Frontend Developer"
+    },
+    "t5": {
+      "description": "Anne impressed in the Join project with her structured and reliable way of working. She thinks ahead, contributes meaningful ideas, and has a good sense for clean code. I especially appreciated her calm, solution-oriented manner and respectful interaction within the team. Working with her was a real asset both professionally and personally.",
+      "jobname": "Frontend Developer"
+    }
 },
 "contactSection": {
   "subtitle": "Contact me",
